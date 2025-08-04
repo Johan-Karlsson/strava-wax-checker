@@ -143,7 +143,7 @@ class StravaBikeTracker {
                 },
                 body: JSON.stringify({
                     client_id: STRAVA_CONFIG.CLIENT_ID,
-                    client_secret: 'YOUR_CLIENT_SECRET', // This should be handled on a backend
+                    client_secret: 'd04752bfd85be50fa072a6ec6f6134e57a4b6247', // Should ideally not be here... whatever
                     refresh_token: refreshToken,
                     grant_type: 'refresh_token'
                 })
@@ -273,7 +273,7 @@ class StravaBikeTracker {
             
             // Filter for cycling activities only
             const cyclingActivities = activities.filter(activity => 
-                activity.type === 'Ride' || activity.sport_type === 'Ride'
+                activity.type === 'Ride' || activity.sport_type === 'Ride' activity.type === 'Virtual Ride' || activity.sport_type === 'Virtual Ride'
             );
             
             allActivities = allActivities.concat(cyclingActivities);
