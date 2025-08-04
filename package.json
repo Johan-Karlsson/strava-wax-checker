@@ -1,5 +1,5 @@
 {
-  "name": "strava-bike-tracker",
+  "name": "strava-wax-checker",
   "version": "1.0.0",
   "description": "A web application to track bike mileage from Strava data",
   "main": "index.html",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yourusername/strava-bike-tracker.git"
+    "url": "git+https://github.com/johan-karlsson/strava-wax-checker.git"
   },
   "keywords": [
     "strava",
@@ -24,12 +24,12 @@
     "html",
     "css"
   ],
-  "author": "Your Name",
+  "author": "Johan Karlsson",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/yourusername/strava-bike-tracker/issues"
+    "url": "https://github.com/Johan-Karlsson/strava-wax-checker/issues"
   },
-  "homepage": "https://yourusername.github.io/strava-bike-tracker/",
+  "homepage": "https://johan-karlsson.github.io/strava-wax-checker/",
   "devDependencies": {},
   "dependencies": {}
 } 
