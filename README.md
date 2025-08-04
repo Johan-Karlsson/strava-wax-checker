@@ -2,8 +2,6 @@
 
 A beautiful web application that connects to your Strava account and shows how far you've ridden each of your bikes since any given date. Built with modern web technologies and designed for GitHub Pages hosting.
 
-![Screenshot](https://via.placeholder.com/800x500/667eea/ffffff?text=Strava+Bike+Tracker+Screenshot)
-
 ## ✨ Features
 
 - **Strava Integration**: Secure OAuth authentication with Strava
@@ -16,7 +14,7 @@ A beautiful web application that connects to your Strava account and shows how f
 
 ## 🚀 Live Demo
 
-Visit the live demo: [https://yourusername.github.io/strava-bike-tracker/](https://yourusername.github.io/strava-bike-tracker/)
+Visit the live demo: [https://johan-karlsson.github.io/strava-wax-checker/]
 
 ## 📋 Prerequisites
 
