@@ -2,7 +2,7 @@
 const STRAVA_CONFIG = {
     // You'll need to replace this with your actual Strava app client ID
     // Register your app at: https://www.strava.com/settings/api
-    CLIENT_ID: 'YOUR_STRAVA_CLIENT_ID',
+    CLIENT_ID: '171148',
     
     // The redirect URI must match exactly what you set in your Strava app settings
     // For GitHub Pages, this will be: https://yourusername.github.io/strava-bike-tracker/
