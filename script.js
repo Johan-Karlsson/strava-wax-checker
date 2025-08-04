@@ -271,9 +271,18 @@ class StravaBikeTracker {
             
             if (activities.length === 0) break;
             
-            // Filter for cycling activities only
-            const cyclingActivities = activities.filter(activity => 
-                activity.type === 'Ride' || activity.sport_type === 'Ride'
+            // Filter for cycling activities, including indoor and virtual rides
+            const cyclingActivities = activities.filter(activity =>
+                (
+                    activity.type === 'Ride' ||
+                    activity.sport_type === 'Ride' ||
+                    activity.type === 'VirtualRide' ||
+                    activity.sport_type === 'VirtualRide'
+                ) ||
+                (
+                    (activity.type === 'Ride' || activity.sport_type === 'Ride') &&
+                    activity.trainer === true
+                )
             );
             
             allActivities = allActivities.concat(cyclingActivities);
