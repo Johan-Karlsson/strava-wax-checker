@@ -273,7 +273,7 @@ class StravaBikeTracker {
             
             // Filter for cycling activities only
             const cyclingActivities = activities.filter(activity => 
-                activity.type === 'Ride' || activity.sport_type === 'Ride' activity.type === 'Virtual Ride' || activity.sport_type === 'Virtual Ride'
+                activity.type === 'Ride' || activity.sport_type === 'Ride' || activity.type === 'Virtual Ride' || activity.sport_type === 'Virtual Ride'
             );
             
             allActivities = allActivities.concat(cyclingActivities);
