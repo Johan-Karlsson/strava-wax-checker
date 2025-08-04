@@ -86,7 +86,7 @@ class StravaBikeTracker {
                 },
                 body: JSON.stringify({
                     client_id: STRAVA_CONFIG.CLIENT_ID,
-                    client_secret: 'YOUR_CLIENT_SECRET', // This should be handled on a backend
+                    client_secret: 'd04752bfd85be50fa072a6ec6f6134e57a4b6247', // Should ideally not be here... whatever
                     code: code,
                     grant_type: 'authorization_code'
                 })
