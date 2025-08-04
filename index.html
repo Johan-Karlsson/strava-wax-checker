@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strava Bike Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-bicycle"></i> Strava Bike Tracker</h1>
+            <p>Track your bike mileage since any date</p>
+        </header>
+
+        <main>
+            <!-- Authentication Section -->
+            <div id="auth-section" class="card">
+                <h2>Connect to Strava</h2>
+                <div id="login-section">
+                    <p>Connect your Strava account to view your bike mileage data</p>
+                    <button id="login-btn" class="btn btn-primary">
+                        <i class="fab fa-strava"></i> Connect Strava Account
+                    </button>
+                </div>
+                <div id="user-info" class="hidden">
+                    <div class="user-profile">
+                        <img id="user-avatar" src="" alt="User Avatar">
+                        <div class="user-details">
+                            <h3 id="user-name"></h3>
+                            <p id="user-location"></p>
+                        </div>
+                        <button id="change-account-btn" class="btn btn-secondary">
+                            <i class="fas fa-user-cog"></i> Change Account
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Date Selection Section -->
+            <div id="date-section" class="card hidden">
+                <h2>Select Date Range</h2>
+                <div class="date-input-group">
+                    <div class="input-group">
+                        <label for="start-date">Start Date:</label>
+                        <input type="date" id="start-date" class="date-input">
+                    </div>
+                    <div class="input-group">
+                        <label for="end-date">End Date:</label>
+                        <input type="date" id="end-date" class="date-input">
+                    </div>
+                    <button id="fetch-data-btn" class="btn btn-primary">
+                        <i class="fas fa-search"></i> Get Bike Data
+                    </button>
+                </div>
+            </div>
+
+            <!-- Loading Section -->
+            <div id="loading-section" class="card hidden">
+                <div class="loading-spinner">
+                    <i class="fas fa-spinner fa-spin"></i>
+                </div>
+                <p>Fetching your bike data from Strava...</p>
+            </div>
+
+            <!-- Results Section -->
+            <div id="results-section" class="card hidden">
+                <h2>Bike Mileage Summary</h2>
+                <div id="summary-stats" class="stats-grid">
+                    <div class="stat-card">
+                        <i class="fas fa-bicycle"></i>
+                        <div class="stat-value" id="total-bikes">0</div>
+                        <div class="stat-label">Total Bikes</div>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-route"></i>
+                        <div class="stat-value" id="total-distance">0 mi</div>
+                        <div class="stat-label">Total Distance</div>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-calendar"></i>
+                        <div class="stat-value" id="total-rides">0</div>
+                        <div class="stat-label">Total Rides</div>
+                    </div>
+                </div>
+                
+                <div id="bikes-list" class="bikes-container">
+                    <!-- Bike data will be populated here -->
+                </div>
+            </div>
+
+            <!-- Error Section -->
+            <div id="error-section" class="card error hidden">
+                <i class="fas fa-exclamation-triangle"></i>
+                <h3>Error</h3>
+                <p id="error-message"></p>
+                <button id="retry-btn" class="btn btn-secondary">
+                    <i class="fas fa-redo"></i> Try Again
+                </button>
+            </div>
+        </main>
+
+        <footer>
+            <p>Built with the Strava API • <a href="https://github.com/yourusername/strava-bike-tracker" target="_blank">View on GitHub</a></p>
+        </footer>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

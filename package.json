@@ -1,0 +1,35 @@
+{
+  "name": "strava-bike-tracker",
+  "version": "1.0.0",
+  "description": "A web application to track bike mileage from Strava data",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "dev": "python3 -m http.server 8000",
+    "serve": "npx serve ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/strava-bike-tracker.git"
+  },
+  "keywords": [
+    "strava",
+    "cycling",
+    "bike",
+    "tracker",
+    "mileage",
+    "api",
+    "oauth",
+    "javascript",
+    "html",
+    "css"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yourusername/strava-bike-tracker/issues"
+  },
+  "homepage": "https://yourusername.github.io/strava-bike-tracker/",
+  "devDependencies": {},
+  "dependencies": {}
+} 
