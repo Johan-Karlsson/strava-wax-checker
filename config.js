@@ -80,7 +80,7 @@ const DistanceUtils = {
         return meters * 0.000621371;
     },
     
-    formatDistance(meters, unit = 'miles') {
+    formatDistance(meters, unit = 'kilometers') {
         if (unit === 'miles') {
             const miles = this.metersToMiles(meters);
             return miles.toFixed(1) + ' mi';
@@ -88,7 +88,7 @@ const DistanceUtils = {
         return (meters / 1000).toFixed(1) + ' km';
     },
     
-    formatElevation(meters, unit = 'feet') {
+    formatElevation(meters, unit = 'meters') {
         if (unit === 'feet') {
             const feet = meters * 3.28084;
             return Math.round(feet) + ' ft';
