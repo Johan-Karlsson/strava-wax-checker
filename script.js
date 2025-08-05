@@ -240,7 +240,8 @@ class StravaBikeTracker {
                     ...bike,
                     distance: 0,
                     rides: 0,
-                    elevation: 0
+                    elevation: 0,
+                    hours: 0
                 });
             });
         }
@@ -301,6 +302,7 @@ class StravaBikeTracker {
             bike.distance = 0;
             bike.rides = 0;
             bike.elevation = 0;
+            bike.hours = 0;
         });
 
         // Calculate distances for each bike
@@ -310,6 +312,7 @@ class StravaBikeTracker {
                 bike.distance += activity.distance || 0;
                 bike.rides += 1;
                 bike.elevation += activity.total_elevation_gain || 0;
+                bike.hours += activity.moving_time || 0;
             }
         });
     }
@@ -423,8 +426,8 @@ class StravaBikeTracker {
                         <div class="bike-stat-label">Elevation</div>
                     </div>
                     <div class="bike-stat">
-                        <div class="bike-stat-value">${DistanceUtils.formatDistance(bike.distance / bike.rides)}</div>
-                        <div class="bike-stat-label">Avg per ride</div>
+                        <div class="bike-stat-value">${DistanceUtils.formatTime(bike.hours)}</div>
+                        <div class="bike-stat-label">Hours</div>
                     </div>
                 </div>
             `;
