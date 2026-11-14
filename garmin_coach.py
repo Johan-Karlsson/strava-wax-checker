@@ -486,19 +486,119 @@ def fetch_coach_snapshot(
     with GarminPersonalApiClient(token.access_token) as client:
         snap = build(client, start_d, end_d, max_activities)
 
+    return enrich_for_agents(snap)
+
+
+def enrich_for_agents(snap: dict[str, Any]) -> dict[str, Any]:
+    """Add Copilot/AI-friendly top-level fields without dropping detail."""
+    agg = snap.get("aggregates") or {}
+    recovery = agg.get("recovery") or {}
+    profile = snap.get("profile") or {}
+    activities = snap.get("activities") or []
+
+    hours = None
+    if agg.get("total_duration_s") is not None:
+        hours = round(float(agg["total_duration_s"]) / 3600.0, 2)
+
+    snap["generated_at"] = snap.get("fetched_at")
+    snap["athlete"] = {"name": profile.get("display_name")}
+    snap["summary"] = {
+        "range": snap.get("range"),
+        "workouts": agg.get("activity_count"),
+        "hours": hours,
+        "distance_km": agg.get("total_distance_km"),
+        "training_load": agg.get("total_training_load"),
+        "activities_by_type": agg.get("activities_by_type"),
+        "avg_sleep_score": agg.get("avg_sleep_score"),
+        "avg_hrv_last_night_ms": agg.get("avg_hrv_last_night_ms"),
+        "avg_resting_hr_bpm": agg.get("avg_resting_hr_bpm"),
+        "avg_stress": agg.get("avg_stress"),
+        "recovery_qualitative": recovery.get("qualitative"),
+        "recovery": recovery,
+    }
+    # Compact recent list for retrieval systems that prefer a simple activities array.
+    snap["recent_activities"] = [
+        {
+            "date": (a.get("start_local") or "")[:10] or None,
+            "name": a.get("name"),
+            "type": a.get("type"),
+            "duration_min": (
+                round(float(a["duration_s"]) / 60.0, 1) if a.get("duration_s") is not None else None
+            ),
+            "distance_km": a.get("distance_km"),
+            "training_load": a.get("training_load"),
+            "avg_hr_bpm": a.get("avg_hr_bpm"),
+            "aerobic_te": a.get("aerobic_te"),
+            "anaerobic_te": a.get("anaerobic_te"),
+        }
+        for a in activities
+    ]
     snap["purpose"] = "agent-coaching"
     snap["coach_hints"] = {
-        "prefer": ["daily", "activities", "aggregates"],
-        "recovery_field": "aggregates.recovery",
+        "prefer": ["summary", "recent_activities", "aggregates.recovery", "daily"],
+        "urls": {
+            "json": "agent.json",
+            "markdown": "agent.md",
+        },
         "training_readiness": (
             "Official Garmin Training Readiness is not in Personal API; "
-            "use aggregates.recovery.qualitative as a local heuristic only."
+            "use summary.recovery_qualitative as a local heuristic only."
         ),
         "empty_sleep_hrv": (
             "Empty sleep/HRV is normal without daily wear of an HRV-capable watch."
         ),
     }
+    # Drop bulky raw zone tables from the agent-facing blob (UI still has coach.json).
+    if isinstance(snap.get("profile"), dict):
+        snap["profile"] = {"display_name": profile.get("display_name")}
     return snap
+
+
+def to_agent_markdown(snap: dict[str, Any]) -> str:
+    """Plain-text companion for AI retrieval systems that prefer Markdown."""
+    summary = snap.get("summary") or {}
+    recovery = summary.get("recovery") or {}
+    athlete = (snap.get("athlete") or {}).get("name") or "Athlete"
+    rng = snap.get("range") or {}
+    lines = [
+        f"# Training Summary — {athlete}",
+        "",
+        f"Generated: {snap.get('generated_at') or snap.get('fetched_at')}",
+        f"Range: {rng.get('start')} → {rng.get('end')}",
+        "",
+        "## Summary",
+        f"- Workouts: {summary.get('workouts')}",
+        f"- Time: {summary.get('hours')} h",
+        f"- Distance: {summary.get('distance_km')} km",
+        f"- Training load: {summary.get('training_load')}",
+        f"- Activities by type: {summary.get('activities_by_type')}",
+        "",
+        "## Recovery",
+        f"- Qualitative: {summary.get('recovery_qualitative')}",
+        f"- Sleep score: {recovery.get('sleep_score')}",
+        f"- HRV (last night): {recovery.get('hrv_last_night_ms')} ms",
+        f"- Body Battery high: {recovery.get('body_battery_high')}",
+        f"- Stress avg: {recovery.get('stress_avg')}",
+        "",
+        "## Recent Activities",
+    ]
+    recent = snap.get("recent_activities") or []
+    if not recent:
+        lines.append("- None in range")
+    for a in recent:
+        lines.append(
+            f"- {a.get('date')}: {a.get('type')}"
+            f"{(' — ' + a['name']) if a.get('name') else ''}"
+            f", {a.get('duration_min')} min"
+            f", {a.get('distance_km')} km"
+            f", load {a.get('training_load')}"
+        )
+    notes = snap.get("notes") or []
+    if notes:
+        lines.extend(["", "## Notes"])
+        lines.extend(f"- {n}" for n in notes)
+    lines.append("")
+    return "\n".join(lines)
 
 
 def main() -> int:

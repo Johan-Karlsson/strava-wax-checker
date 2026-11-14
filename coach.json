@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "garmin-connect-personal-api",
-  "fetched_at": "2026-11-14T17:37:47.066140+00:00",
+  "fetched_at": "2026-11-14T18:12:10.949885+00:00",
   "range": {
     "start": "2026-11-01",
     "end": "2026-11-14"
@@ -36,22 +36,7 @@
     }
   },
   "profile": {
-    "display_name": "3438c958-8aa9-4725-8600-e917bf16a894",
-    "hr_zones": [
-      {
-        "trainingMethod": "HR_MAX",
-        "restingHeartRateUsed": 54,
-        "lactateThresholdHeartRateUsed": 185,
-        "zone1Floor": 102,
-        "zone2Floor": 122,
-        "zone3Floor": 146,
-        "zone4Floor": 162,
-        "zone5Floor": 183,
-        "maxHeartRateUsed": 203,
-        "restingHrAutoUpdateUsed": false,
-        "sport": "DEFAULT"
-      }
-    ]
+    "display_name": "3438c958-8aa9-4725-8600-e917bf16a894"
   },
   "daily": [
     {
@@ -543,15 +528,176 @@
     "No scored sleep nights in range (often empty until daily watch wear).",
     "No HRV averages in range (needs overnight HRV-capable wear)."
   ],
+  "generated_at": "2026-11-14T18:12:10.949885+00:00",
+  "athlete": {
+    "name": "3438c958-8aa9-4725-8600-e917bf16a894"
+  },
+  "summary": {
+    "range": {
+      "start": "2026-11-01",
+      "end": "2026-11-14"
+    },
+    "workouts": 11,
+    "hours": 14.31,
+    "distance_km": 350.413,
+    "training_load": 954.8,
+    "activities_by_type": {
+      "virtual_ride": 6,
+      "strength_training": 3,
+      "gravel_cycling": 1,
+      "running": 1
+    },
+    "avg_sleep_score": null,
+    "avg_hrv_last_night_ms": null,
+    "avg_resting_hr_bpm": 103.5,
+    "avg_stress": 16.5,
+    "recovery_qualitative": "adequate",
+    "recovery": {
+      "latest_date": "2026-11-11",
+      "sleep_score": null,
+      "hrv_last_night_ms": null,
+      "hrv_vs_baseline": "unknown",
+      "body_battery_high": 58,
+      "stress_avg": null,
+      "qualitative": "adequate"
+    }
+  },
+  "recent_activities": [
+    {
+      "date": "2026-11-12",
+      "name": "Zwift - Z2 wave 90min",
+      "type": "virtual_ride",
+      "duration_min": 90.4,
+      "distance_km": 52.586,
+      "training_load": 80.52812194824219,
+      "avg_hr_bpm": 131.0,
+      "aerobic_te": 3.0,
+      "anaerobic_te": 0.0
+    },
+    {
+      "date": "2026-11-11",
+      "name": "Styrka",
+      "type": "strength_training",
+      "duration_min": 51.0,
+      "distance_km": null,
+      "training_load": null,
+      "avg_hr_bpm": 119.0,
+      "aerobic_te": null,
+      "anaerobic_te": null
+    },
+    {
+      "date": "2026-11-10",
+      "name": "Zwift - Sweet Spot 3x20min",
+      "type": "virtual_ride",
+      "duration_min": 65.2,
+      "distance_km": 44.191,
+      "training_load": 220.8938446044922,
+      "avg_hr_bpm": 164.0,
+      "aerobic_te": 4.400000095367432,
+      "anaerobic_te": 0.0
+    },
+    {
+      "date": "2026-11-08",
+      "name": "Zwift - 60m in the fika zone",
+      "type": "virtual_ride",
+      "duration_min": 60.2,
+      "distance_km": 12.782,
+      "training_load": 56.077423095703125,
+      "avg_hr_bpm": 132.0,
+      "aerobic_te": 2.5999999046325684,
+      "anaerobic_te": 0.0
+    },
+    {
+      "date": "2026-11-08",
+      "name": "Styrka",
+      "type": "strength_training",
+      "duration_min": 39.0,
+      "distance_km": null,
+      "training_load": null,
+      "avg_hr_bpm": 102.0,
+      "aerobic_te": null,
+      "anaerobic_te": null
+    },
+    {
+      "date": "2026-11-07",
+      "name": "Gothenburg Gravel/Unpaved Cycling",
+      "type": "gravel_cycling",
+      "duration_min": 219.1,
+      "distance_km": 93.576,
+      "training_load": 198.09519958496094,
+      "avg_hr_bpm": 142.0,
+      "aerobic_te": 4.099999904632568,
+      "anaerobic_te": 1.100000023841858
+    },
+    {
+      "date": "2026-11-05",
+      "name": "Gothenburg Running",
+      "type": "running",
+      "duration_min": 27.6,
+      "distance_km": 4.849,
+      "training_load": null,
+      "avg_hr_bpm": 141.0,
+      "aerobic_te": null,
+      "anaerobic_te": null
+    },
+    {
+      "date": "2026-11-04",
+      "name": "Zwift - 60m in the fika zone",
+      "type": "virtual_ride",
+      "duration_min": 60.6,
+      "distance_km": 32.688,
+      "training_load": 60.583526611328125,
+      "avg_hr_bpm": 138.0,
+      "aerobic_te": 2.799999952316284,
+      "anaerobic_te": 0.0
+    },
+    {
+      "date": "2026-11-04",
+      "name": "Styrka",
+      "type": "strength_training",
+      "duration_min": 54.0,
+      "distance_km": null,
+      "training_load": null,
+      "avg_hr_bpm": 117.0,
+      "aerobic_te": null,
+      "anaerobic_te": null
+    },
+    {
+      "date": "2026-11-03",
+      "name": "Zwift - Sweet Spot 3x20min",
+      "type": "virtual_ride",
+      "duration_min": 90.3,
+      "distance_km": 55.304,
+      "training_load": 256.9818115234375,
+      "avg_hr_bpm": 166.0,
+      "aerobic_te": 5.0,
+      "anaerobic_te": 0.0
+    },
+    {
+      "date": "2026-11-01",
+      "name": "Zwift - Group Ride: Long - Stage 4 - Tour of Watopia 2026",
+      "type": "virtual_ride",
+      "duration_min": 101.5,
+      "distance_km": 54.437,
+      "training_load": 81.67701721191406,
+      "avg_hr_bpm": 134.0,
+      "aerobic_te": 3.200000047683716,
+      "anaerobic_te": 0.0
+    }
+  ],
   "purpose": "agent-coaching",
   "coach_hints": {
     "prefer": [
-      "daily",
-      "activities",
-      "aggregates"
+      "summary",
+      "recent_activities",
+      "aggregates.recovery",
+      "daily"
     ],
-    "recovery_field": "aggregates.recovery",
-    "training_readiness": "Official Garmin Training Readiness is not in Personal API; use aggregates.recovery.qualitative as a local heuristic only.",
+    "urls": {
+      "json": "agent.json",
+      "markdown": "agent.md"
+    },
+    "training_readiness": "Official Garmin Training Readiness is not in Personal API; use summary.recovery_qualitative as a local heuristic only.",
     "empty_sleep_hrv": "Empty sleep/HRV is normal without daily wear of an HRV-capable watch."
   }
 }

@@ -95,24 +95,36 @@ For development and personal use, you can temporarily add your Client Secret dir
 
 ## 🤖 Garmin coach data (static page + API)
 
-The site shows a **Garmin Coach Data** panel at the top.
+**Primary URL for AI agents / Copilot:**
 
-- **In the browser:** [`/agent`](https://johan-karlsson.github.io/strava-wax-checker/agent/) shows the JSON on the page (no download prompt).
-- **Raw JSON for agents:** [`/agent.json`](https://johan-karlsson.github.io/strava-wax-checker/agent.json) (`application/json`, also displays inline in modern browsers).
-- Both are refreshed every 10 minutes by GitHub Actions. The Personal API key lives in `config.js`.
-- **Live browser refresh of the UI:** Garmin blocks CORS — use FastAPI or set `GARMIN_CONFIG.PROXY_BASE` for `GET /api/coach`.
+[`https://johan-karlsson.github.io/strava-wax-checker/agent.json`](https://johan-karlsson.github.io/strava-wax-checker/agent.json)
 
-### Agent endpoint
+Verified serving:
+
+- `Content-Type: application/json; charset=utf-8`
+- No auth / cookies / CAPTCHA
+- Public GitHub Pages
+- Compact payload (tens of KB, last ~14 days)
+
+Markdown companion (often better for LLM retrieval):
+
+[`https://johan-karlsson.github.io/strava-wax-checker/agent.md`](https://johan-karlsson.github.io/strava-wax-checker/agent.md)
+
+`/agent/` is only a redirect helper to `agent.json`. Prefer **`agent.json`** or **`agent.md`** for retrieval.
+
+The JSON includes AI-friendly top-level fields: `generated_at`, `athlete`, `summary`, `recent_activities`, plus detailed `daily` / `activities` / `aggregates`.
+
+Refreshed every 10 minutes by GitHub Actions. The Personal API key lives in `config.js` for the refresh job / local tools.
+
+### Quick checks
 
 ```bash
-# Pretty view in a browser:
-# https://johan-karlsson.github.io/strava-wax-checker/agent/
-
-# Machine-readable JSON:
-curl -s 'https://johan-karlsson.github.io/strava-wax-checker/agent.json' | jq .
+curl -I https://johan-karlsson.github.io/strava-wax-checker/agent.json
+curl -s https://johan-karlsson.github.io/strava-wax-checker/agent.json | head
+curl -s https://johan-karlsson.github.io/strava-wax-checker/agent.md | head
 ```
 
-Local FastAPI:
+### Local FastAPI
 
 ```bash
 python3 -m venv .venv
@@ -120,40 +132,32 @@ source .venv/bin/activate
 pip install -r requirements.txt
 cp .env.example .env   # then set GARMIN_PERSONAL_API_KEY
 npm run dev
-curl -s 'http://127.0.0.1:8000/agent.json' | jq '.aggregates'
+curl -s 'http://127.0.0.1:8000/agent.json' | jq '.summary'
 ```
 
 ### Endpoints
 
 | Method | Path | Description |
 | --- | --- | --- |
-| `GET` | `/agent` | HTML JSON viewer in browsers; raw JSON if `Accept: application/json` |
-| `GET` | `/agent.json` | Coaching snapshot JSON (inline in browsers; best for agents) |
+| `GET` | `/agent.json` | Coaching JSON (`application/json`) — use this for agents |
+| `GET` | `/agent.md` | Markdown training summary — use this for LLM retrieval |
+| `GET` | `/agent` | Redirect/helper page to `agent.json` |
 | `GET` | `/api/health` | Liveness check |
-| `GET` | `/api/coach` | Live Garmin fetch (schema `1.0`); also refreshes `agent.json` |
+| `GET` | `/api/coach` | Live Garmin fetch; refreshes `agent.json` / `agent.md` |
 | `GET` | `/` | Strava wax-checker UI |
 
 ### Query parameters for `/api/coach`
 
-- `days` (default `14`, max `92`) — last N days including today
-- `start` / `end` — optional `YYYY-MM-DD` inclusive range
+- `days` (default `14`, max `92`)
+- `start` / `end` — optional `YYYY-MM-DD`
 - `max_activities` (default `200`)
 
-Examples:
+CLI:
 
 ```bash
-curl -s 'http://127.0.0.1:8000/api/coach?days=14' | jq '.aggregates'
-curl -s 'http://127.0.0.1:8000/api/coach?start=2026-10-01&end=2026-11-14' -o coach.json
-```
-
-The JSON matches the `garmin-data` skill snapshot contract (`daily`,
-`activities`, `aggregates.recovery`, etc.) plus `purpose: "agent-coaching"`
-and `coach_hints` for downstream recommendation skills.
-
-CLI without the server:
-
-```bash
-python3 garmin_coach.py --days 28 -o coach.json && cp coach.json agent.json
+python3 garmin_coach.py --days 14 -o coach.json
+cp coach.json agent.json
+python3 -c "import json; from pathlib import Path; from garmin_coach import to_agent_markdown; p=Path('agent.json'); Path('agent.md').write_text(to_agent_markdown(json.loads(p.read_text())))"
 ```
 
 ## 🛠️ Technical Details

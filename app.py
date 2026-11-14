@@ -12,10 +12,11 @@ from fastapi import FastAPI, Header, HTTPException, Query, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse, JSONResponse, Response
 
-from garmin_coach import fetch_coach_snapshot
+from garmin_coach import fetch_coach_snapshot, to_agent_markdown
 
 ROOT = Path(__file__).resolve().parent
 AGENT_JSON_PATH = ROOT / "agent.json"
+AGENT_MD_PATH = ROOT / "agent.md"
 AGENT_HTML_PATH = ROOT / "agent" / "index.html"
 COACH_JSON_PATH = ROOT / "coach.json"
 load_dotenv(ROOT / ".env")
@@ -38,9 +39,10 @@ app.add_middleware(
 
 
 def write_static_snapshots(snap: dict[str, Any]) -> None:
-    """Write GitHub Pages artifacts: agent.json and coach.json (UI fallback)."""
+    """Write GitHub Pages artifacts for agents + UI fallback."""
     text = json.dumps(snap, indent=2, default=str) + "\n"
     AGENT_JSON_PATH.write_text(text, encoding="utf-8")
+    AGENT_MD_PATH.write_text(to_agent_markdown(snap), encoding="utf-8")
     COACH_JSON_PATH.write_text(text, encoding="utf-8")
 
 
@@ -74,6 +76,15 @@ def agent_page(request: Request) -> Response:
 def agent_json() -> JSONResponse:
     """Raw coaching JSON with application/json (displays inline in browsers)."""
     return JSONResponse(content=load_agent_snapshot())
+
+
+@app.get("/agent.md")
+def agent_markdown() -> Response:
+    """Plain-text Markdown companion for AI retrieval systems."""
+    if AGENT_MD_PATH.is_file():
+        return FileResponse(AGENT_MD_PATH, media_type="text/markdown; charset=utf-8")
+    snap = load_agent_snapshot()
+    return Response(content=to_agent_markdown(snap), media_type="text/markdown; charset=utf-8")
 
 
 @app.get("/api/coach")
@@ -126,6 +137,7 @@ STATIC_FILES = {
     "config.js",
     "coach.json",
     "agent.json",
+    "agent.md",
     "package.json",
     "README.md",
 }
