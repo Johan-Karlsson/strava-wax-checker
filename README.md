@@ -97,7 +97,7 @@ For development and personal use, you can temporarily add your Client Secret dir
 
 The site shows a **Garmin Coach Data** panel at the top.
 
-- **GitHub Pages:** loads `coach.json` (refreshed every 6 hours by GitHub Actions, or manually via the workflow). The Personal API key lives in `config.js` as requested.
+- **GitHub Pages:** loads `coach.json` (refreshed every 10 minutes by GitHub Actions, or manually via the workflow). The Personal API key lives in `config.js` as requested.
 - **Live refresh:** Garmin’s API does not allow browser CORS. Serve the site with the FastAPI app (or set `GARMIN_CONFIG.PROXY_BASE` to a deployed API origin) so the page can call `GET /api/coach` with the key from JS.
 
 ### Coach API (for agents)
