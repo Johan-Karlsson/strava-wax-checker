@@ -4,9 +4,10 @@
   "description": "A web application to track bike mileage from Strava data",
   "main": "index.html",
   "scripts": {
-    "start": "python -m http.server 8000",
-    "dev": "python3 -m http.server 8000",
-    "serve": "npx serve ."
+    "start": "python3 -m uvicorn app:app --host 127.0.0.1 --port 8000",
+    "dev": "python3 -m uvicorn app:app --host 127.0.0.1 --port 8000 --reload",
+    "serve": "npx serve .",
+    "coach": "python3 garmin_coach.py --days 14"
   },
   "repository": {
     "type": "git",

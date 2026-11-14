@@ -1,0 +1,318 @@
+{
+  "schema_version": "1.0",
+  "source": "garmin-connect-personal-api",
+  "fetched_at": "2026-11-14T16:55:42.847874+00:00",
+  "range": {
+    "start": "2026-11-08",
+    "end": "2026-11-14"
+  },
+  "availability": {
+    "profile": {
+      "status": "ok"
+    },
+    "hr_zones": {
+      "status": "ok"
+    },
+    "daily_summaries": {
+      "status": "ok"
+    },
+    "sleep": {
+      "status": "empty"
+    },
+    "hrv": {
+      "status": "empty"
+    },
+    "body_battery": {
+      "status": "ok"
+    },
+    "vo2_max": {
+      "status": "ok"
+    },
+    "fitness_age": {
+      "status": "ok"
+    },
+    "activities": {
+      "status": "ok"
+    }
+  },
+  "profile": {
+    "display_name": "3438c958-8aa9-4725-8600-e917bf16a894",
+    "hr_zones": [
+      {
+        "trainingMethod": "HR_MAX",
+        "restingHeartRateUsed": 54,
+        "lactateThresholdHeartRateUsed": 185,
+        "zone1Floor": 102,
+        "zone2Floor": 122,
+        "zone3Floor": 146,
+        "zone4Floor": 162,
+        "zone5Floor": 183,
+        "maxHeartRateUsed": 203,
+        "restingHrAutoUpdateUsed": false,
+        "sport": "DEFAULT"
+      }
+    ]
+  },
+  "daily": [
+    {
+      "date": "2026-11-08",
+      "steps": 2802,
+      "calories_total": 2178,
+      "calories_active": 820,
+      "resting_hr_bpm": 66,
+      "stress_avg": 16,
+      "body_battery_high": 57,
+      "body_battery_low": 48,
+      "body_battery_charged": 10,
+      "body_battery_drained": 6,
+      "intensity_moderate_min": 0,
+      "intensity_vigorous_min": 0
+    },
+    {
+      "date": "2026-11-09",
+      "body_battery_charged": null,
+      "body_battery_drained": null
+    },
+    {
+      "date": "2026-11-10",
+      "steps": null,
+      "calories_total": 886,
+      "calories_active": 886,
+      "resting_hr_bpm": null,
+      "stress_avg": null,
+      "body_battery_high": null,
+      "body_battery_low": null,
+      "body_battery_charged": null,
+      "body_battery_drained": null,
+      "intensity_moderate_min": null,
+      "intensity_vigorous_min": null,
+      "vo2_max": 64.0
+    },
+    {
+      "date": "2026-11-11",
+      "steps": 2696,
+      "calories_total": 1467,
+      "calories_active": 376,
+      "resting_hr_bpm": 109,
+      "stress_avg": null,
+      "body_battery_high": 58,
+      "body_battery_low": 50,
+      "body_battery_charged": 0,
+      "body_battery_drained": 8,
+      "intensity_moderate_min": 0,
+      "intensity_vigorous_min": 0
+    },
+    {
+      "date": "2026-11-12",
+      "steps": null,
+      "calories_total": 993,
+      "calories_active": 993,
+      "resting_hr_bpm": null,
+      "stress_avg": null,
+      "body_battery_high": null,
+      "body_battery_low": null,
+      "body_battery_charged": null,
+      "body_battery_drained": null,
+      "intensity_moderate_min": null,
+      "intensity_vigorous_min": null
+    },
+    {
+      "date": "2026-11-13",
+      "body_battery_charged": null,
+      "body_battery_drained": null
+    },
+    {
+      "date": "2026-11-14",
+      "body_battery_charged": null,
+      "body_battery_drained": null
+    }
+  ],
+  "activities": [
+    {
+      "id": 25057022496,
+      "name": "Zwift - Z2 wave 90min",
+      "type": "virtual_ride",
+      "start_local": "2026-11-12 17:21:50",
+      "duration_s": 5422.0,
+      "distance_m": 52585.80859375,
+      "distance_km": 52.586,
+      "avg_hr_bpm": 131.0,
+      "max_hr_bpm": 148.0,
+      "avg_pace_min_per_km": 1.72,
+      "training_load": 80.52812194824219,
+      "aerobic_te": 3.0,
+      "anaerobic_te": 0.0,
+      "hr_zone_min": {
+        "z1": 4.4,
+        "z2": 85.6,
+        "z3": 0.3,
+        "z4": 0.0,
+        "z5": 0.0
+      },
+      "calories": 993.0,
+      "elevation_gain_m": 298.0
+    },
+    {
+      "id": 25041783023,
+      "name": "Styrka",
+      "type": "strength_training",
+      "start_local": "2026-11-11 11:38:38",
+      "duration_s": 3061.283935546875,
+      "distance_m": 0.0,
+      "distance_km": null,
+      "avg_hr_bpm": 119.0,
+      "max_hr_bpm": 149.0,
+      "avg_pace_min_per_km": null,
+      "training_load": null,
+      "aerobic_te": null,
+      "anaerobic_te": null,
+      "hr_zone_min": {
+        "z1": 29.1,
+        "z2": 18.4,
+        "z3": 0.5,
+        "z4": 0.0,
+        "z5": 0.0
+      },
+      "calories": 379.0,
+      "elevation_gain_m": null
+    },
+    {
+      "id": 25033847313,
+      "name": "Zwift - Sweet Spot 3x20min",
+      "type": "virtual_ride",
+      "start_local": "2026-11-10 17:43:18",
+      "duration_s": 3910.0,
+      "distance_m": 44191.1484375,
+      "distance_km": 44.191,
+      "avg_hr_bpm": 164.0,
+      "max_hr_bpm": 190.0,
+      "avg_pace_min_per_km": 1.47,
+      "training_load": 220.8938446044922,
+      "aerobic_te": 4.400000095367432,
+      "anaerobic_te": 0.0,
+      "hr_zone_min": {
+        "z1": 3.6,
+        "z2": 9.2,
+        "z3": 10.7,
+        "z4": 27.3,
+        "z5": 14.1
+      },
+      "calories": 886.0,
+      "elevation_gain_m": 68.0
+    },
+    {
+      "id": 25011119333,
+      "name": "Zwift - 60m in the fika zone",
+      "type": "virtual_ride",
+      "start_local": "2026-11-08 16:00:01",
+      "duration_s": 3611.0,
+      "distance_m": 12782.490234375,
+      "distance_km": 12.782,
+      "avg_hr_bpm": 132.0,
+      "max_hr_bpm": 144.0,
+      "avg_pace_min_per_km": 4.71,
+      "training_load": 56.077423095703125,
+      "aerobic_te": 2.5999999046325684,
+      "anaerobic_te": 0.0,
+      "hr_zone_min": {
+        "z1": 0.6,
+        "z2": 59.5,
+        "z3": 0.0,
+        "z4": 0.0,
+        "z5": 0.0
+      },
+      "calories": 677.0,
+      "elevation_gain_m": 855.0
+    },
+    {
+      "id": 25008194800,
+      "name": "Styrka",
+      "type": "strength_training",
+      "start_local": "2026-11-08 12:36:41",
+      "duration_s": 2342.406005859375,
+      "distance_m": 0.0,
+      "distance_km": null,
+      "avg_hr_bpm": 102.0,
+      "max_hr_bpm": 133.0,
+      "avg_pace_min_per_km": null,
+      "training_load": null,
+      "aerobic_te": null,
+      "anaerobic_te": null,
+      "hr_zone_min": {
+        "z1": 16.8,
+        "z2": 3.5,
+        "z3": 0.0,
+        "z4": 0.0,
+        "z5": 0.0
+      },
+      "calories": 216.0,
+      "elevation_gain_m": null
+    }
+  ],
+  "aggregates": {
+    "activity_count": 5,
+    "total_duration_s": 18346.7,
+    "total_distance_km": 109.559,
+    "total_training_load": 357.5,
+    "activities_by_type": {
+      "virtual_ride": 3,
+      "strength_training": 2
+    },
+    "avg_sleep_score": null,
+    "avg_hrv_last_night_ms": null,
+    "avg_resting_hr_bpm": 87.5,
+    "avg_stress": 16.0,
+    "fitness_age": {
+      "chronologicalAge": 31,
+      "components": {
+        "vigorousDaysAvg": {
+          "stale": true,
+          "staleInputs": [
+            "VIGOROUS_DAYS"
+          ]
+        },
+        "rhr": {
+          "value": 90,
+          "stale": false
+        },
+        "vigorousMinutesAvg": {
+          "stale": true,
+          "staleInputs": [
+            "VIGOROUS_MINUTES"
+          ]
+        },
+        "bmi": {
+          "value": 21.2,
+          "stale": false,
+          "lastMeasurementDate": "2026-05-29"
+        }
+      },
+      "lastUpdated": "2026-11-14T00:00:00.0"
+    },
+    "recovery": {
+      "latest_date": "2026-11-11",
+      "sleep_score": null,
+      "hrv_last_night_ms": null,
+      "hrv_vs_baseline": "unknown",
+      "body_battery_high": 58,
+      "stress_avg": null,
+      "qualitative": "adequate"
+    }
+  },
+  "notes": [
+    "Training Readiness / Training Status are not in Personal API; aggregates.recovery.qualitative is a local heuristic.",
+    "No scored sleep nights in range (often empty until daily watch wear).",
+    "No HRV averages in range (needs overnight HRV-capable wear)."
+  ],
+  "purpose": "agent-coaching",
+  "coach_hints": {
+    "prefer": [
+      "daily",
+      "activities",
+      "aggregates"
+    ],
+    "recovery_field": "aggregates.recovery",
+    "training_readiness": "Official Garmin Training Readiness is not in Personal API; use aggregates.recovery.qualitative as a local heuristic only.",
+    "empty_sleep_hrv": "Empty sleep/HRV is normal without daily wear of an HRV-capable watch."
+  }
+}

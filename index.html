@@ -12,10 +12,75 @@
     <div class="container">
         <header>
             <h1><i class="fas fa-bicycle"></i> Strava Bike Tracker</h1>
-            <p>Track your bike mileage since any date</p>
+            <p>Track bike mileage and Garmin training data</p>
         </header>
 
         <main>
+            <!-- Garmin coaching data (works on GitHub Pages via coach.json; live via /api/coach) -->
+            <div id="garmin-section" class="card">
+                <h2><i class="fas fa-heartbeat"></i> Garmin Coach Data</h2>
+                <p>Training, recovery, sleep, HRV, and Body Battery for coaching agents and quick review.</p>
+                <div class="date-input-group garmin-controls">
+                    <div class="input-group">
+                        <label for="garmin-days">Days</label>
+                        <input type="number" id="garmin-days" class="date-input" min="1" max="92" value="14">
+                    </div>
+                    <button id="garmin-refresh-btn" class="btn btn-primary">
+                        <i class="fas fa-sync-alt"></i> Refresh Garmin Data
+                    </button>
+                </div>
+                <p id="garmin-status" class="muted"></p>
+                <p id="garmin-error" class="garmin-error hidden"></p>
+                <div id="garmin-empty" class="muted">Loading…</div>
+                <div id="garmin-results" class="hidden">
+                    <p id="garmin-meta" class="muted"></p>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <i class="fas fa-running"></i>
+                            <div class="stat-value" id="g-activity-count">0</div>
+                            <div class="stat-label">Activities</div>
+                        </div>
+                        <div class="stat-card">
+                            <i class="fas fa-route"></i>
+                            <div class="stat-value" id="g-distance">0 km</div>
+                            <div class="stat-label">Distance</div>
+                        </div>
+                        <div class="stat-card">
+                            <i class="fas fa-bolt"></i>
+                            <div class="stat-value" id="g-load">0</div>
+                            <div class="stat-label">Training Load</div>
+                        </div>
+                        <div class="stat-card">
+                            <i class="fas fa-heart"></i>
+                            <div class="stat-value" id="g-recovery">—</div>
+                            <div class="stat-label">Recovery</div>
+                        </div>
+                    </div>
+                    <div class="stats-grid">
+                        <div class="stat-card garmin-secondary">
+                            <div class="stat-value" id="g-sleep">—</div>
+                            <div class="stat-label">Sleep score</div>
+                        </div>
+                        <div class="stat-card garmin-secondary">
+                            <div class="stat-value" id="g-hrv">—</div>
+                            <div class="stat-label">HRV</div>
+                        </div>
+                        <div class="stat-card garmin-secondary">
+                            <div class="stat-value" id="g-body-battery">—</div>
+                            <div class="stat-label">Body Battery high</div>
+                        </div>
+                        <div class="stat-card garmin-secondary">
+                            <div class="stat-value" id="g-stress">—</div>
+                            <div class="stat-label">Stress avg</div>
+                        </div>
+                    </div>
+                    <div id="garmin-availability" class="avail-row"></div>
+                    <div id="garmin-notes" class="garmin-notes"></div>
+                    <h3>Recent activities</h3>
+                    <div id="garmin-activities" class="bikes-container"></div>
+                </div>
+            </div>
+
             <!-- Authentication Section -->
             <div id="auth-section" class="card">
                 <h2>Connect to Strava</h2>
@@ -108,6 +173,7 @@
     </div>
 
     <script src="config.js"></script>
+    <script src="garmin.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

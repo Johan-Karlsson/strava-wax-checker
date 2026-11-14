@@ -26,6 +26,22 @@ const STRAVA_CONFIG = {
     }
 };
 
+// Garmin Connect Personal API (key is intentionally client-side for this personal site).
+// Garmin itself blocks browser CORS, so live fetches use PROXY_BASE (same-origin
+// /api/coach when served via uvicorn, or a deployed API URL). GitHub Pages also
+// loads FALLBACK_JSON which is refreshed by GitHub Actions.
+const GARMIN_CONFIG = {
+    PERSONAL_API_KEY: 'GCDC_cef18a6a-c1a1-4ef0-94bb-032442084ac1.2715452b-61bf-404e-91c1-57e5864a8892.FiNCzY2A2BWZRRgC+XHC69zLB3zObsC5/qiSMmvqXAM.933697316',
+    // Empty = same-origin /api/coach when available (local FastAPI). For GitHub Pages
+    // live refresh, set this to your deployed API origin, e.g. https://my-app.onrender.com
+    PROXY_BASE: '',
+    FALLBACK_JSON: 'coach.json',
+    DEFAULT_DAYS: 14,
+    BASE_URL: 'https://personal.connectapi.garmin.com',
+    TOKEN_PATH: '/personalapitoken-service/personal-api/personal-api-key/token'
+};
+
+
 // Utility functions for token management
 const TokenManager = {
     setTokens(tokenData) {

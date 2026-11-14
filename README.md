@@ -11,6 +11,7 @@ A beautiful web application that connects to your Strava account and shows how f
 - **Beautiful UI**: Modern, responsive design with smooth animations
 - **Detailed Stats**: Distance, rides, elevation, and averages for each bike
 - **GitHub Pages Ready**: Easy deployment to GitHub Pages
+- **Coach API**: `GET /api/coach` returns Garmin training/recovery JSON for AI coaching agents
 
 ## 🚀 Live Demo
 
@@ -92,6 +93,59 @@ For development and personal use, you can temporarily add your Client Secret dir
 4. **View Results**: See distance, rides, and elevation for each bike
 5. **Change Account**: Use "Change Account" to switch Strava accounts if needed
 
+## 🤖 Garmin coach data (static page + API)
+
+The site shows a **Garmin Coach Data** panel at the top.
+
+- **GitHub Pages:** loads `coach.json` (refreshed every 6 hours by GitHub Actions, or manually via the workflow). The Personal API key lives in `config.js` as requested.
+- **Live refresh:** Garmin’s API does not allow browser CORS. Serve the site with the FastAPI app (or set `GARMIN_CONFIG.PROXY_BASE` to a deployed API origin) so the page can call `GET /api/coach` with the key from JS.
+
+### Coach API (for agents)
+
+Run the included FastAPI app locally (or on any host):
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+cp .env.example .env   # then set GARMIN_PERSONAL_API_KEY
+npm run dev            # or: uvicorn app:app --reload --port 8000
+```
+
+### Endpoints
+
+| Method | Path | Description |
+| --- | --- | --- |
+| `GET` | `/api/health` | Liveness check |
+| `GET` | `/api/coach` | Garmin coaching snapshot (schema `1.0`) |
+| `GET` | `/` | Existing Strava wax-checker UI |
+
+### Query parameters for `/api/coach`
+
+- `days` (default `14`, max `92`) — last N days including today
+- `start` / `end` — optional `YYYY-MM-DD` inclusive range
+- `max_activities` (default `200`)
+
+Examples:
+
+```bash
+curl -s 'http://127.0.0.1:8000/api/coach?days=14' | jq '.aggregates'
+curl -s 'http://127.0.0.1:8000/api/coach?start=2026-10-01&end=2026-11-14' -o coach.json
+```
+
+The JSON matches the `garmin-data` skill snapshot contract (`daily`,
+`activities`, `aggregates.recovery`, etc.) plus `purpose: "agent-coaching"`
+and `coach_hints` for downstream recommendation skills.
+
+CLI without the server:
+
+```bash
+python3 garmin_coach.py --days 28 -o coach.json
+```
+
+> **Note:** The public GitHub Pages URL only serves static files. Agents need
+> this FastAPI process (or another host running `app.py`) to hit `/api/coach`.
+
 ## 🛠️ Technical Details
 
 ### Built With
@@ -100,6 +154,7 @@ For development and personal use, you can temporarily add your Client Secret dir
 - **CSS3** - Modern styling with CSS Grid and Flexbox
 - **Vanilla JavaScript** - No frameworks, just pure JS
 - **Strava API v3** - Official Strava REST API
+- **FastAPI** - Coach API (`/api/coach`) over Garmin Personal API
 - **Font Awesome** - Icons and visual elements
 - **Inter Font** - Modern, readable typography
 
