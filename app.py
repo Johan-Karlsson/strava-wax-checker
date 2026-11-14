@@ -15,15 +15,16 @@ from fastapi.responses import FileResponse, JSONResponse, Response
 from garmin_coach import fetch_coach_snapshot
 
 ROOT = Path(__file__).resolve().parent
-AGENT_PATH = ROOT / "agent"
+AGENT_JSON_PATH = ROOT / "agent.json"
+AGENT_HTML_PATH = ROOT / "agent" / "index.html"
 COACH_JSON_PATH = ROOT / "coach.json"
 load_dotenv(ROOT / ".env")
 
 app = FastAPI(
     title="Strava Wax Checker + Coach API",
     description=(
-        "Static bike wax tracker UI plus agent coaching JSON at GET /agent "
-        "and live Garmin fetch at GET /api/coach."
+        "Static bike wax tracker UI plus agent coaching JSON at GET /agent.json "
+        "(browser-friendly) and live Garmin fetch at GET /api/coach."
     ),
     version="1.0.0",
 )
@@ -37,14 +38,14 @@ app.add_middleware(
 
 
 def write_static_snapshots(snap: dict[str, Any]) -> None:
-    """Write GitHub Pages artifacts: /agent and coach.json (UI fallback)."""
+    """Write GitHub Pages artifacts: agent.json and coach.json (UI fallback)."""
     text = json.dumps(snap, indent=2, default=str) + "\n"
-    AGENT_PATH.write_text(text, encoding="utf-8")
+    AGENT_JSON_PATH.write_text(text, encoding="utf-8")
     COACH_JSON_PATH.write_text(text, encoding="utf-8")
 
 
 def load_agent_snapshot() -> dict[str, Any]:
-    path = AGENT_PATH if AGENT_PATH.is_file() else COACH_JSON_PATH
+    path = AGENT_JSON_PATH if AGENT_JSON_PATH.is_file() else COACH_JSON_PATH
     if not path.is_file():
         raise HTTPException(
             status_code=404,
@@ -59,8 +60,19 @@ def health() -> dict[str, str]:
 
 
 @app.get("/agent")
-def agent_snapshot() -> JSONResponse:
-    """Static coaching JSON for agents (same payload published on GitHub Pages)."""
+@app.get("/agent/")
+def agent_page(request: Request) -> Response:
+    """Browser: HTML viewer. Agents/API clients: raw JSON (Accept: application/json)."""
+    accept = (request.headers.get("accept") or "").lower()
+    wants_html = "text/html" in accept and "application/json" not in accept.split(",")[0]
+    if wants_html and AGENT_HTML_PATH.is_file():
+        return FileResponse(AGENT_HTML_PATH, media_type="text/html")
+    return JSONResponse(content=load_agent_snapshot())
+
+
+@app.get("/agent.json")
+def agent_json() -> JSONResponse:
+    """Raw coaching JSON with application/json (displays inline in browsers)."""
     return JSONResponse(content=load_agent_snapshot())
 
 
@@ -113,6 +125,7 @@ STATIC_FILES = {
     "garmin.js",
     "config.js",
     "coach.json",
+    "agent.json",
     "package.json",
     "README.md",
 }
@@ -125,12 +138,13 @@ def index() -> FileResponse:
 
 @app.get("/{name}")
 def static_file(name: str) -> Response:
-    # Prefer the dedicated /agent route; do not serve a conflicting static name here.
     if name == "agent":
-        return agent_snapshot()
+        # Handled by /agent routes above; keep as safety net.
+        return JSONResponse(content=load_agent_snapshot())
     if name not in STATIC_FILES or not (ROOT / name).is_file():
         raise HTTPException(status_code=404, detail="Not found")
-    return FileResponse(ROOT / name)
+    media = "application/json" if name.endswith(".json") else None
+    return FileResponse(ROOT / name, media_type=media)
 
 
 if __name__ == "__main__":

@@ -97,14 +97,19 @@ For development and personal use, you can temporarily add your Client Secret dir
 
 The site shows a **Garmin Coach Data** panel at the top.
 
-- **Agent URL:** [`/agent`](https://johan-karlsson.github.io/strava-wax-checker/agent) returns the full coaching JSON (refreshed every 10 minutes by Actions).
-- **Site UI:** loads `coach.json` (same payload). The Personal API key lives in `config.js`.
-- **Live browser refresh:** Garmin blocks CORS — use FastAPI or set `GARMIN_CONFIG.PROXY_BASE` for `GET /api/coach`.
+- **In the browser:** [`/agent`](https://johan-karlsson.github.io/strava-wax-checker/agent/) shows the JSON on the page (no download prompt).
+- **Raw JSON for agents:** [`/agent.json`](https://johan-karlsson.github.io/strava-wax-checker/agent.json) (`application/json`, also displays inline in modern browsers).
+- Both are refreshed every 10 minutes by GitHub Actions. The Personal API key lives in `config.js`.
+- **Live browser refresh of the UI:** Garmin blocks CORS — use FastAPI or set `GARMIN_CONFIG.PROXY_BASE` for `GET /api/coach`.
 
 ### Agent endpoint
 
 ```bash
-curl -s 'https://johan-karlsson.github.io/strava-wax-checker/agent' | jq .
+# Pretty view in a browser:
+# https://johan-karlsson.github.io/strava-wax-checker/agent/
+
+# Machine-readable JSON:
+curl -s 'https://johan-karlsson.github.io/strava-wax-checker/agent.json' | jq .
 ```
 
 Local FastAPI:
@@ -114,17 +119,18 @@ python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 cp .env.example .env   # then set GARMIN_PERSONAL_API_KEY
-npm run dev            # or: uvicorn app:app --reload --port 8000
-curl -s 'http://127.0.0.1:8000/agent' | jq '.aggregates'
+npm run dev
+curl -s 'http://127.0.0.1:8000/agent.json' | jq '.aggregates'
 ```
 
 ### Endpoints
 
 | Method | Path | Description |
 | --- | --- | --- |
-| `GET` | `/agent` | Coaching snapshot JSON for agents (static on GitHub Pages) |
+| `GET` | `/agent` | HTML JSON viewer in browsers; raw JSON if `Accept: application/json` |
+| `GET` | `/agent.json` | Coaching snapshot JSON (inline in browsers; best for agents) |
 | `GET` | `/api/health` | Liveness check |
-| `GET` | `/api/coach` | Live Garmin fetch (schema `1.0`); also refreshes `/agent` |
+| `GET` | `/api/coach` | Live Garmin fetch (schema `1.0`); also refreshes `agent.json` |
 | `GET` | `/` | Strava wax-checker UI |
 
 ### Query parameters for `/api/coach`
@@ -147,7 +153,7 @@ and `coach_hints` for downstream recommendation skills.
 CLI without the server:
 
 ```bash
-python3 garmin_coach.py --days 28 -o coach.json && cp coach.json agent
+python3 garmin_coach.py --days 28 -o coach.json && cp coach.json agent.json
 ```
 
 ## 🛠️ Technical Details

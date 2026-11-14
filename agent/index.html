@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="refresh" content="0; url=../agent.json">
+  <title>Agent coaching JSON</title>
+  <style>
+    body { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; margin: 2rem; background: #0b1220; color: #e2e8f0; }
+    a { color: #63b3ed; }
+    pre { white-space: pre-wrap; word-break: break-word; }
+  </style>
+</head>
+<body>
+  <p>Loading coaching JSON… If you are not redirected, open <a href="../agent.json">agent.json</a>.</p>
+  <pre id="out">Loading…</pre>
+  <script>
+    // Show JSON inline even if meta-refresh is blocked; keeps /agent useful in the browser.
+    fetch('../agent.json', { cache: 'no-store' })
+      .then((r) => r.json())
+      .then((data) => {
+        document.getElementById('out').textContent = JSON.stringify(data, null, 2);
+      })
+      .catch((err) => {
+        document.getElementById('out').textContent = String(err);
+      });
+  </script>
+</body>
+</html>
