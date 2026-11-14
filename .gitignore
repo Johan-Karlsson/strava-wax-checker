@@ -34,6 +34,10 @@ node_modules/
 # Temporary files
 *.tmp
 *.temp
+coach.josn
 
 # Config files with sensitive data (uncomment if you add secrets)
 # config.js 
+.venv/
+__pycache__/
+*.pyc
