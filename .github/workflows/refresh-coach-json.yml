@@ -1,0 +1,60 @@
+name: Refresh coach.json
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"
+  workflow_dispatch:
+  push:
+    paths:
+      - "garmin_coach.py"
+      - "requirements.txt"
+      - "config.js"
+      - ".github/workflows/refresh-coach-json.yml"
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install deps
+        run: pip install -r requirements.txt
+
+      - name: Extract Garmin key from config.js
+        id: key
+        run: |
+          KEY=$(python3 - <<'PY'
+          import re
+          from pathlib import Path
+          text = Path("config.js").read_text()
+          m = re.search(r"PERSONAL_API_KEY:\s*'([^']+)'", text)
+          if not m:
+              raise SystemExit("PERSONAL_API_KEY not found in config.js")
+          print(m.group(1))
+          PY
+          )
+          echo "::add-mask::$KEY"
+          echo "value=$KEY" >> "$GITHUB_OUTPUT"
+
+      - name: Fetch coaching snapshot
+        env:
+          GARMIN_PERSONAL_API_KEY: ${{ steps.key.outputs.value }}
+        run: python garmin_coach.py --days 14 -o coach.json
+
+      - name: Commit coach.json if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add coach.json
+          if git diff --staged --quiet; then
+            echo "No changes"
+          else
+            git commit -m "Refresh coach.json from Garmin Personal API"
+            git push
+          fi
