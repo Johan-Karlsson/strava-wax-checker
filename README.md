@@ -97,12 +97,17 @@ For development and personal use, you can temporarily add your Client Secret dir
 
 The site shows a **Garmin Coach Data** panel at the top.
 
-- **GitHub Pages:** loads `coach.json` (refreshed every 10 minutes by GitHub Actions, or manually via the workflow). The Personal API key lives in `config.js` as requested.
-- **Live refresh:** Garmin’s API does not allow browser CORS. Serve the site with the FastAPI app (or set `GARMIN_CONFIG.PROXY_BASE` to a deployed API origin) so the page can call `GET /api/coach` with the key from JS.
+- **Agent URL:** [`/agent`](https://johan-karlsson.github.io/strava-wax-checker/agent) returns the full coaching JSON (refreshed every 10 minutes by Actions).
+- **Site UI:** loads `coach.json` (same payload). The Personal API key lives in `config.js`.
+- **Live browser refresh:** Garmin blocks CORS — use FastAPI or set `GARMIN_CONFIG.PROXY_BASE` for `GET /api/coach`.
 
-### Coach API (for agents)
+### Agent endpoint
 
-Run the included FastAPI app locally (or on any host):
+```bash
+curl -s 'https://johan-karlsson.github.io/strava-wax-checker/agent' | jq .
+```
+
+Local FastAPI:
 
 ```bash
 python3 -m venv .venv
@@ -110,15 +115,17 @@ source .venv/bin/activate
 pip install -r requirements.txt
 cp .env.example .env   # then set GARMIN_PERSONAL_API_KEY
 npm run dev            # or: uvicorn app:app --reload --port 8000
+curl -s 'http://127.0.0.1:8000/agent' | jq '.aggregates'
 ```
 
 ### Endpoints
 
 | Method | Path | Description |
 | --- | --- | --- |
+| `GET` | `/agent` | Coaching snapshot JSON for agents (static on GitHub Pages) |
 | `GET` | `/api/health` | Liveness check |
-| `GET` | `/api/coach` | Garmin coaching snapshot (schema `1.0`) |
-| `GET` | `/` | Existing Strava wax-checker UI |
+| `GET` | `/api/coach` | Live Garmin fetch (schema `1.0`); also refreshes `/agent` |
+| `GET` | `/` | Strava wax-checker UI |
 
 ### Query parameters for `/api/coach`
 
@@ -140,11 +147,8 @@ and `coach_hints` for downstream recommendation skills.
 CLI without the server:
 
 ```bash
-python3 garmin_coach.py --days 28 -o coach.json
+python3 garmin_coach.py --days 28 -o coach.json && cp coach.json agent
 ```
-
-> **Note:** The public GitHub Pages URL only serves static files. Agents need
-> this FastAPI process (or another host running `app.py`) to hit `/api/coach`.
 
 ## 🛠️ Technical Details
 

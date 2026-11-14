@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import json
 import os
 from pathlib import Path
 from typing import Any
@@ -9,18 +10,20 @@ from typing import Any
 from dotenv import load_dotenv
 from fastapi import FastAPI, Header, HTTPException, Query, Request
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import FileResponse
+from fastapi.responses import FileResponse, JSONResponse, Response
 
 from garmin_coach import fetch_coach_snapshot
 
 ROOT = Path(__file__).resolve().parent
+AGENT_PATH = ROOT / "agent"
+COACH_JSON_PATH = ROOT / "coach.json"
 load_dotenv(ROOT / ".env")
 
 app = FastAPI(
     title="Strava Wax Checker + Coach API",
     description=(
-        "Static bike wax tracker UI plus GET /api/coach, which returns a "
-        "Garmin Personal API snapshot shaped for training-coach agents."
+        "Static bike wax tracker UI plus agent coaching JSON at GET /agent "
+        "and live Garmin fetch at GET /api/coach."
     ),
     version="1.0.0",
 )
@@ -33,9 +36,32 @@ app.add_middleware(
 )
 
 
+def write_static_snapshots(snap: dict[str, Any]) -> None:
+    """Write GitHub Pages artifacts: /agent and coach.json (UI fallback)."""
+    text = json.dumps(snap, indent=2, default=str) + "\n"
+    AGENT_PATH.write_text(text, encoding="utf-8")
+    COACH_JSON_PATH.write_text(text, encoding="utf-8")
+
+
+def load_agent_snapshot() -> dict[str, Any]:
+    path = AGENT_PATH if AGENT_PATH.is_file() else COACH_JSON_PATH
+    if not path.is_file():
+        raise HTTPException(
+            status_code=404,
+            detail="No agent snapshot yet. Run the refresh workflow or GET /api/coach.",
+        )
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
 @app.get("/api/health")
 def health() -> dict[str, str]:
     return {"status": "ok"}
+
+
+@app.get("/agent")
+def agent_snapshot() -> JSONResponse:
+    """Static coaching JSON for agents (same payload published on GitHub Pages)."""
+    return JSONResponse(content=load_agent_snapshot())
 
 
 @app.get("/api/coach")
@@ -68,12 +94,8 @@ def coach(
             max_activities=max_activities,
             api_key=api_key,
         )
-        # Keep a static copy for GitHub Pages fallback when running locally.
         try:
-            out = ROOT / "coach.json"
-            import json
-
-            out.write_text(json.dumps(snap, indent=2, default=str) + "\n", encoding="utf-8")
+            write_static_snapshots(snap)
         except OSError:
             pass
         return snap
@@ -102,7 +124,10 @@ def index() -> FileResponse:
 
 
 @app.get("/{name}")
-def static_file(name: str) -> FileResponse:
+def static_file(name: str) -> Response:
+    # Prefer the dedicated /agent route; do not serve a conflicting static name here.
+    if name == "agent":
+        return agent_snapshot()
     if name not in STATIC_FILES or not (ROOT / name).is_file():
         raise HTTPException(status_code=404, detail="Not found")
     return FileResponse(ROOT / name)
