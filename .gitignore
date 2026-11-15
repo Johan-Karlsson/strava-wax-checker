@@ -35,6 +35,8 @@ node_modules/
 *.tmp
 *.temp
 coach.josn
+agent.json
+agent.md
 
 # Config files with sensitive data (uncomment if you add secrets)
 # config.js 
