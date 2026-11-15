@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "garmin-connect-personal-api",
-  "fetched_at": "2026-11-15T05:33:04.016587+00:00",
+  "fetched_at": "2026-11-15T13:40:16.027052+00:00",
   "range": {
     "start": "2026-11-02",
     "end": "2026-11-15"
@@ -192,11 +192,45 @@
     },
     {
       "date": "2026-11-15",
+      "steps": null,
+      "calories_total": 595,
+      "calories_active": 595,
+      "resting_hr_bpm": null,
+      "stress_avg": null,
+      "body_battery_high": null,
+      "body_battery_low": null,
       "body_battery_charged": null,
-      "body_battery_drained": null
+      "body_battery_drained": null,
+      "intensity_moderate_min": null,
+      "intensity_vigorous_min": null,
+      "vo2_max": 65.0
     }
   ],
   "activities": [
+    {
+      "id": 25085873967,
+      "name": "Zwift - Minimum VO2max",
+      "type": "virtual_ride",
+      "start_local": "2026-11-15 11:56:52",
+      "duration_s": 2715.0,
+      "distance_m": 29428.099609375,
+      "distance_km": 29.428,
+      "avg_hr_bpm": 166.0,
+      "max_hr_bpm": 202.0,
+      "avg_pace_min_per_km": 1.54,
+      "training_load": 280.2152404785156,
+      "aerobic_te": 4.099999904632568,
+      "anaerobic_te": 3.0999999046325684,
+      "hr_zone_min": {
+        "z1": 2.5,
+        "z2": 5.4,
+        "z3": 11.7,
+        "z4": 10.4,
+        "z5": 15.2
+      },
+      "calories": 595.0,
+      "elevation_gain_m": 86.0
+    },
     {
       "id": 25057022496,
       "name": "Zwift - Z2 wave 90min",
@@ -439,12 +473,12 @@
     }
   ],
   "aggregates": {
-    "activity_count": 10,
-    "total_duration_s": 45438.7,
-    "total_distance_km": 295.976,
-    "total_training_load": 873.2,
+    "activity_count": 11,
+    "total_duration_s": 48153.7,
+    "total_distance_km": 325.404,
+    "total_training_load": 1153.4,
     "activities_by_type": {
-      "virtual_ride": 5,
+      "virtual_ride": 6,
       "strength_training": 3,
       "gravel_cycling": 1,
       "running": 1
@@ -495,7 +529,7 @@
     "No scored sleep nights in range (often empty until daily watch wear).",
     "No HRV averages in range (needs overnight HRV-capable wear)."
   ],
-  "generated_at": "2026-11-15T05:33:04.016587+00:00",
+  "generated_at": "2026-11-15T13:40:16.027052+00:00",
   "athlete": {
     "name": "3438c958-8aa9-4725-8600-e917bf16a894"
   },
@@ -504,12 +538,12 @@
       "start": "2026-11-02",
       "end": "2026-11-15"
     },
-    "workouts": 10,
-    "hours": 12.62,
-    "distance_km": 295.976,
-    "training_load": 873.2,
+    "workouts": 11,
+    "hours": 13.38,
+    "distance_km": 325.404,
+    "training_load": 1153.4,
     "activities_by_type": {
-      "virtual_ride": 5,
+      "virtual_ride": 6,
       "strength_training": 3,
       "gravel_cycling": 1,
       "running": 1
@@ -530,6 +564,17 @@
     }
   },
   "recent_activities": [
+    {
+      "date": "2026-11-15",
+      "name": "Zwift - Minimum VO2max",
+      "type": "virtual_ride",
+      "duration_min": 45.2,
+      "distance_km": 29.428,
+      "training_load": 280.2152404785156,
+      "avg_hr_bpm": 166.0,
+      "aerobic_te": 4.099999904632568,
+      "anaerobic_te": 3.0999999046325684
+    },
     {
       "date": "2026-11-12",
       "name": "Zwift - Z2 wave 90min",
