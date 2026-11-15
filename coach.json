@@ -1,10 +1,10 @@
 {
   "schema_version": "1.0",
   "source": "garmin-connect-personal-api",
-  "fetched_at": "2026-11-14T22:07:34.706955+00:00",
+  "fetched_at": "2026-11-15T05:33:04.016587+00:00",
   "range": {
-    "start": "2026-11-01",
-    "end": "2026-11-14"
+    "start": "2026-11-02",
+    "end": "2026-11-15"
   },
   "availability": {
     "profile": {
@@ -39,20 +39,6 @@
     "display_name": "3438c958-8aa9-4725-8600-e917bf16a894"
   },
   "daily": [
-    {
-      "date": "2026-11-01",
-      "steps": null,
-      "calories_total": 1069,
-      "calories_active": 1069,
-      "resting_hr_bpm": null,
-      "stress_avg": null,
-      "body_battery_high": null,
-      "body_battery_low": null,
-      "body_battery_charged": null,
-      "body_battery_drained": null,
-      "intensity_moderate_min": null,
-      "intensity_vigorous_min": null
-    },
     {
       "date": "2026-11-02",
       "body_battery_charged": null,
@@ -201,6 +187,11 @@
     },
     {
       "date": "2026-11-14",
+      "body_battery_charged": null,
+      "body_battery_drained": null
+    },
+    {
+      "date": "2026-11-15",
       "body_battery_charged": null,
       "body_battery_drained": null
     }
@@ -445,39 +436,15 @@
       },
       "calories": 1258.0,
       "elevation_gain_m": 554.0
-    },
-    {
-      "id": 24929745768,
-      "name": "Zwift - Group Ride: Long - Stage 4 - Tour of Watopia 2026",
-      "type": "virtual_ride",
-      "start_local": "2026-11-01 08:02:13",
-      "duration_s": 6091.0,
-      "distance_m": 54436.66015625,
-      "distance_km": 54.437,
-      "avg_hr_bpm": 134.0,
-      "max_hr_bpm": 150.0,
-      "avg_pace_min_per_km": 1.86,
-      "training_load": 81.67701721191406,
-      "aerobic_te": 3.200000047683716,
-      "anaerobic_te": 0.0,
-      "hr_zone_min": {
-        "z1": 1.9,
-        "z2": 98.9,
-        "z3": 0.2,
-        "z4": 0.0,
-        "z5": 0.0
-      },
-      "calories": 1069.0,
-      "elevation_gain_m": 383.0
     }
   ],
   "aggregates": {
-    "activity_count": 11,
-    "total_duration_s": 51529.7,
-    "total_distance_km": 350.413,
-    "total_training_load": 954.8,
+    "activity_count": 10,
+    "total_duration_s": 45438.7,
+    "total_distance_km": 295.976,
+    "total_training_load": 873.2,
     "activities_by_type": {
-      "virtual_ride": 6,
+      "virtual_ride": 5,
       "strength_training": 3,
       "gravel_cycling": 1,
       "running": 1
@@ -511,7 +478,7 @@
           "lastMeasurementDate": "2026-05-29"
         }
       },
-      "lastUpdated": "2026-11-14T00:00:00.0"
+      "lastUpdated": "2026-11-15T00:00:00.0"
     },
     "recovery": {
       "latest_date": "2026-11-11",
@@ -528,21 +495,21 @@
     "No scored sleep nights in range (often empty until daily watch wear).",
     "No HRV averages in range (needs overnight HRV-capable wear)."
   ],
-  "generated_at": "2026-11-14T22:07:34.706955+00:00",
+  "generated_at": "2026-11-15T05:33:04.016587+00:00",
   "athlete": {
     "name": "3438c958-8aa9-4725-8600-e917bf16a894"
   },
   "summary": {
     "range": {
-      "start": "2026-11-01",
-      "end": "2026-11-14"
+      "start": "2026-11-02",
+      "end": "2026-11-15"
     },
-    "workouts": 11,
-    "hours": 14.31,
-    "distance_km": 350.413,
-    "training_load": 954.8,
+    "workouts": 10,
+    "hours": 12.62,
+    "distance_km": 295.976,
+    "training_load": 873.2,
     "activities_by_type": {
-      "virtual_ride": 6,
+      "virtual_ride": 5,
       "strength_training": 3,
       "gravel_cycling": 1,
       "running": 1
@@ -671,17 +638,6 @@
       "training_load": 256.9818115234375,
       "avg_hr_bpm": 166.0,
       "aerobic_te": 5.0,
-      "anaerobic_te": 0.0
-    },
-    {
-      "date": "2026-11-01",
-      "name": "Zwift - Group Ride: Long - Stage 4 - Tour of Watopia 2026",
-      "type": "virtual_ride",
-      "duration_min": 101.5,
-      "distance_km": 54.437,
-      "training_load": 81.67701721191406,
-      "avg_hr_bpm": 134.0,
-      "aerobic_te": 3.200000047683716,
       "anaerobic_te": 0.0
     }
   ],
