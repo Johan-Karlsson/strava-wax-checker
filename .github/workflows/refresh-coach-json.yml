@@ -1,8 +1,9 @@
-name: Refresh coach.json
+name: Refresh agent coaching JSON
 
 on:
   schedule:
-    - cron: "0 */6 * * *"
+    # Every 10 minutes. GitHub may delay cron under load, but this is the intended cadence.
+    - cron: "*/10 * * * *"
   workflow_dispatch:
   push:
     paths:
@@ -42,19 +43,38 @@ jobs:
           echo "::add-mask::$KEY"
           echo "value=$KEY" >> "$GITHUB_OUTPUT"
 
-      - name: Fetch coaching snapshot
+      - name: Fetch coaching snapshot through today (UTC)
         env:
           GARMIN_PERSONAL_API_KEY: ${{ steps.key.outputs.value }}
-        run: python garmin_coach.py --days 14 -o coach.json
+          TZ: UTC
+        run: |
+          END="$(date -u +%F)"
+          echo "Fetching range ending ${END} (UTC today)"
+          # Rolling last 14 days ending today — end date moves forward every run.
+          python garmin_coach.py --days 14 --end "$END" -o coach.json
+          cp coach.json agent.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          from garmin_coach import to_agent_markdown
+          snap = json.loads(Path("agent.json").read_text())
+          Path("agent.md").write_text(to_agent_markdown(snap), encoding="utf-8")
+          print("range", snap.get("range"))
+          print("generated_at", snap.get("generated_at") or snap.get("fetched_at"))
+          print("activities", len(snap.get("activities") or []))
+          print("wrote agent.md", Path("agent.md").stat().st_size, "bytes")
+          PY
 
-      - name: Commit coach.json if changed
+      - name: Commit refreshed snapshots
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add coach.json
+          # Always refresh the public agent artifacts, not only coach.json
+          git add coach.json agent.json agent.md
           if git diff --staged --quiet; then
-            echo "No changes"
+            echo "No content changes after fetch"
           else
-            git commit -m "Refresh coach.json from Garmin Personal API"
+            END="$(date -u +%F)"
+            git commit -m "Refresh coaching snapshots through ${END}"
             git push
           fi
