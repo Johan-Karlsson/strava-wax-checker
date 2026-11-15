@@ -114,7 +114,7 @@ Markdown companion (often better for LLM retrieval):
 
 The JSON includes AI-friendly top-level fields: `generated_at`, `athlete`, `summary`, `recent_activities`, plus detailed `daily` / `activities` / `aggregates`.
 
-Refreshed every 10 minutes by GitHub Actions. The Personal API key lives in `config.js` for the refresh job / local tools.
+Refreshed about every 10 minutes by GitHub Actions (updates `coach.json`, `agent.json`, and `agent.md` through **UTC today**). GitHub may delay cron slightly under load. The Personal API key lives in `config.js` for the refresh job / local tools.
 
 ### Quick checks
 

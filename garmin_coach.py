@@ -450,7 +450,8 @@ def resolve_range(
     start: str | None = None,
     end: str | None = None,
 ) -> tuple[date, date]:
-    today = date.today()
+    # Use UTC so GitHub Actions and local runs share the same "today".
+    today = datetime.now(timezone.utc).date()
     end_d = date.fromisoformat(end) if end else today
     start_d = date.fromisoformat(start) if start else end_d - timedelta(days=max(days, 1) - 1)
     if start_d > end_d:
