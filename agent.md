@@ -1,23 +1,24 @@
 # Training Summary — 3438c958-8aa9-4725-8600-e917bf16a894
 
-Generated: 2026-11-15T14:14:32.668037+00:00
+Generated: 2026-11-15T19:49:41.631714+00:00
 Range: 2026-11-02 → 2026-11-15
 
 ## Summary
-- Workouts: 11
-- Time: 13.38 h
+- Workouts: 12
+- Time: 14.04 h
 - Distance: 325.404 km
 - Training load: 1153.4
-- Activities by type: {'virtual_ride': 6, 'strength_training': 3, 'gravel_cycling': 1, 'running': 1}
+- Activities by type: {'strength_training': 4, 'virtual_ride': 6, 'gravel_cycling': 1, 'running': 1}
 
 ## Recovery
-- Qualitative: adequate
+- Qualitative: poor
 - Sleep score: None
 - HRV (last night): None ms
-- Body Battery high: 58
+- Body Battery high: 40
 - Stress avg: None
 
 ## Recent Activities
+- 2026-11-15: strength_training — Styrka, 39.8 min, None km, load None
 - 2026-11-15: virtual_ride — Zwift - Minimum VO2max, 45.2 min, 29.428 km, load 280.2152404785156
 - 2026-11-12: virtual_ride — Zwift - Z2 wave 90min, 90.4 min, 52.586 km, load 80.52812194824219
 - 2026-11-11: strength_training — Styrka, 51.0 min, None km, load None
