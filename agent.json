@@ -1,10 +1,10 @@
 {
   "schema_version": "1.0",
   "source": "garmin-connect-personal-api",
-  "fetched_at": "2026-11-15T23:34:43.656968+00:00",
+  "fetched_at": "2026-11-16T03:02:52.229693+00:00",
   "range": {
-    "start": "2026-11-02",
-    "end": "2026-11-15"
+    "start": "2026-11-03",
+    "end": "2026-11-16"
   },
   "availability": {
     "profile": {
@@ -39,11 +39,6 @@
     "display_name": "3438c958-8aa9-4725-8600-e917bf16a894"
   },
   "daily": [
-    {
-      "date": "2026-11-02",
-      "body_battery_charged": null,
-      "body_battery_drained": null
-    },
     {
       "date": "2026-11-03",
       "steps": null,
@@ -204,6 +199,11 @@
       "intensity_moderate_min": 0,
       "intensity_vigorous_min": 0,
       "vo2_max": 65.0
+    },
+    {
+      "date": "2026-11-16",
+      "body_battery_charged": null,
+      "body_battery_drained": null
     }
   ],
   "activities": [
@@ -536,7 +536,7 @@
           "lastMeasurementDate": "2026-05-29"
         }
       },
-      "lastUpdated": "2026-11-15T00:00:00.0"
+      "lastUpdated": "2026-11-16T00:00:00.0"
     },
     "recovery": {
       "latest_date": "2026-11-15",
@@ -553,14 +553,14 @@
     "No scored sleep nights in range (often empty until daily watch wear).",
     "No HRV averages in range (needs overnight HRV-capable wear)."
   ],
-  "generated_at": "2026-11-15T23:34:43.656968+00:00",
+  "generated_at": "2026-11-16T03:02:52.229693+00:00",
   "athlete": {
     "name": "3438c958-8aa9-4725-8600-e917bf16a894"
   },
   "summary": {
     "range": {
-      "start": "2026-11-02",
-      "end": "2026-11-15"
+      "start": "2026-11-03",
+      "end": "2026-11-16"
     },
     "workouts": 12,
     "hours": 14.04,
