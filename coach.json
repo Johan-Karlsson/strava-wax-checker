@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "garmin-connect-personal-api",
-  "fetched_at": "2026-11-17T12:17:35.502931+00:00",
+  "fetched_at": "2026-11-17T21:04:29.371983+00:00",
   "range": {
     "start": "2026-11-04",
     "end": "2026-11-17"
@@ -192,11 +192,45 @@
     },
     {
       "date": "2026-11-17",
+      "steps": null,
+      "calories_total": 1349,
+      "calories_active": 1349,
+      "resting_hr_bpm": null,
+      "stress_avg": null,
+      "body_battery_high": null,
+      "body_battery_low": null,
       "body_battery_charged": null,
-      "body_battery_drained": null
+      "body_battery_drained": null,
+      "intensity_moderate_min": null,
+      "intensity_vigorous_min": null,
+      "vo2_max": 64.0
     }
   ],
   "activities": [
+    {
+      "id": 25110897841,
+      "name": "Zwift - Z2 wave",
+      "type": "virtual_ride",
+      "start_local": "2026-11-17 16:46:00",
+      "duration_s": 7219.0,
+      "distance_m": 70074.25,
+      "distance_km": 70.074,
+      "avg_hr_bpm": 139.0,
+      "max_hr_bpm": 152.0,
+      "avg_pace_min_per_km": 1.72,
+      "training_load": 109.213134765625,
+      "aerobic_te": 3.299999952316284,
+      "anaerobic_te": 0.0,
+      "hr_zone_min": {
+        "z1": 1.7,
+        "z2": 102.8,
+        "z3": 15.5,
+        "z4": 0.0,
+        "z5": 0.0
+      },
+      "calories": 1349.0,
+      "elevation_gain_m": 596.0
+    },
     {
       "id": 25088548624,
       "name": "Styrka",
@@ -463,13 +497,13 @@
     }
   ],
   "aggregates": {
-    "activity_count": 11,
-    "total_duration_s": 45122.9,
-    "total_distance_km": 270.1,
-    "total_training_load": 896.4,
+    "activity_count": 12,
+    "total_duration_s": 52341.9,
+    "total_distance_km": 340.174,
+    "total_training_load": 1005.6,
     "activities_by_type": {
+      "virtual_ride": 6,
       "strength_training": 4,
-      "virtual_ride": 5,
       "gravel_cycling": 1,
       "running": 1
     },
@@ -519,7 +553,7 @@
     "No scored sleep nights in range (often empty until daily watch wear).",
     "No HRV averages in range (needs overnight HRV-capable wear)."
   ],
-  "generated_at": "2026-11-17T12:17:35.502931+00:00",
+  "generated_at": "2026-11-17T21:04:29.371983+00:00",
   "athlete": {
     "name": "3438c958-8aa9-4725-8600-e917bf16a894"
   },
@@ -528,13 +562,13 @@
       "start": "2026-11-04",
       "end": "2026-11-17"
     },
-    "workouts": 11,
-    "hours": 12.53,
-    "distance_km": 270.1,
-    "training_load": 896.4,
+    "workouts": 12,
+    "hours": 14.54,
+    "distance_km": 340.174,
+    "training_load": 1005.6,
     "activities_by_type": {
+      "virtual_ride": 6,
       "strength_training": 4,
-      "virtual_ride": 5,
       "gravel_cycling": 1,
       "running": 1
     },
@@ -554,6 +588,17 @@
     }
   },
   "recent_activities": [
+    {
+      "date": "2026-11-17",
+      "name": "Zwift - Z2 wave",
+      "type": "virtual_ride",
+      "duration_min": 120.3,
+      "distance_km": 70.074,
+      "training_load": 109.213134765625,
+      "avg_hr_bpm": 139.0,
+      "aerobic_te": 3.299999952316284,
+      "anaerobic_te": 0.0
+    },
     {
       "date": "2026-11-15",
       "name": "Styrka",
