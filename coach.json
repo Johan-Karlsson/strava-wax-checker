@@ -1,10 +1,10 @@
 {
   "schema_version": "1.0",
   "source": "garmin-connect-personal-api",
-  "fetched_at": "2026-11-16T20:57:20.136290+00:00",
+  "fetched_at": "2026-11-17T03:26:52.690595+00:00",
   "range": {
-    "start": "2026-11-03",
-    "end": "2026-11-16"
+    "start": "2026-11-04",
+    "end": "2026-11-17"
   },
   "availability": {
     "profile": {
@@ -39,21 +39,6 @@
     "display_name": "3438c958-8aa9-4725-8600-e917bf16a894"
   },
   "daily": [
-    {
-      "date": "2026-11-03",
-      "steps": null,
-      "calories_total": 1258,
-      "calories_active": 1258,
-      "resting_hr_bpm": null,
-      "stress_avg": null,
-      "body_battery_high": null,
-      "body_battery_low": null,
-      "body_battery_charged": null,
-      "body_battery_drained": null,
-      "intensity_moderate_min": null,
-      "intensity_vigorous_min": null,
-      "vo2_max": 65.0
-    },
     {
       "date": "2026-11-04",
       "steps": 2261,
@@ -202,6 +187,11 @@
     },
     {
       "date": "2026-11-16",
+      "body_battery_charged": null,
+      "body_battery_drained": null
+    },
+    {
+      "date": "2026-11-17",
       "body_battery_charged": null,
       "body_battery_drained": null
     }
@@ -470,40 +460,16 @@
       },
       "calories": 385.0,
       "elevation_gain_m": null
-    },
-    {
-      "id": 24954319270,
-      "name": "Zwift - Sweet Spot 3x20min",
-      "type": "virtual_ride",
-      "start_local": "2026-11-03 11:12:36",
-      "duration_s": 5419.0,
-      "distance_m": 55304.01953125,
-      "distance_km": 55.304,
-      "avg_hr_bpm": 166.0,
-      "max_hr_bpm": 187.0,
-      "avg_pace_min_per_km": 1.63,
-      "training_load": 256.9818115234375,
-      "aerobic_te": 5.0,
-      "anaerobic_te": 0.0,
-      "hr_zone_min": {
-        "z1": 3.4,
-        "z2": 8.4,
-        "z3": 16.7,
-        "z4": 52.0,
-        "z5": 9.8
-      },
-      "calories": 1258.0,
-      "elevation_gain_m": 554.0
     }
   ],
   "aggregates": {
-    "activity_count": 12,
-    "total_duration_s": 50541.9,
-    "total_distance_km": 325.404,
-    "total_training_load": 1153.4,
+    "activity_count": 11,
+    "total_duration_s": 45122.9,
+    "total_distance_km": 270.1,
+    "total_training_load": 896.4,
     "activities_by_type": {
       "strength_training": 4,
-      "virtual_ride": 6,
+      "virtual_ride": 5,
       "gravel_cycling": 1,
       "running": 1
     },
@@ -536,7 +502,7 @@
           "lastMeasurementDate": "2026-05-29"
         }
       },
-      "lastUpdated": "2026-11-16T00:00:00.0"
+      "lastUpdated": "2026-11-17T00:00:00.0"
     },
     "recovery": {
       "latest_date": "2026-11-15",
@@ -553,22 +519,22 @@
     "No scored sleep nights in range (often empty until daily watch wear).",
     "No HRV averages in range (needs overnight HRV-capable wear)."
   ],
-  "generated_at": "2026-11-16T20:57:20.136290+00:00",
+  "generated_at": "2026-11-17T03:26:52.690595+00:00",
   "athlete": {
     "name": "3438c958-8aa9-4725-8600-e917bf16a894"
   },
   "summary": {
     "range": {
-      "start": "2026-11-03",
-      "end": "2026-11-16"
+      "start": "2026-11-04",
+      "end": "2026-11-17"
     },
-    "workouts": 12,
-    "hours": 14.04,
-    "distance_km": 325.404,
-    "training_load": 1153.4,
+    "workouts": 11,
+    "hours": 12.53,
+    "distance_km": 270.1,
+    "training_load": 896.4,
     "activities_by_type": {
       "strength_training": 4,
-      "virtual_ride": 6,
+      "virtual_ride": 5,
       "gravel_cycling": 1,
       "running": 1
     },
@@ -708,17 +674,6 @@
       "avg_hr_bpm": 117.0,
       "aerobic_te": null,
       "anaerobic_te": null
-    },
-    {
-      "date": "2026-11-03",
-      "name": "Zwift - Sweet Spot 3x20min",
-      "type": "virtual_ride",
-      "duration_min": 90.3,
-      "distance_km": 55.304,
-      "training_load": 256.9818115234375,
-      "avg_hr_bpm": 166.0,
-      "aerobic_te": 5.0,
-      "anaerobic_te": 0.0
     }
   ],
   "purpose": "agent-coaching",
