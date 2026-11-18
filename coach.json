@@ -1,10 +1,10 @@
 {
   "schema_version": "1.0",
   "source": "garmin-connect-personal-api",
-  "fetched_at": "2026-11-17T21:04:29.371983+00:00",
+  "fetched_at": "2026-11-18T02:51:58.801943+00:00",
   "range": {
-    "start": "2026-11-04",
-    "end": "2026-11-17"
+    "start": "2026-11-05",
+    "end": "2026-11-18"
   },
   "availability": {
     "profile": {
@@ -39,21 +39,6 @@
     "display_name": "3438c958-8aa9-4725-8600-e917bf16a894"
   },
   "daily": [
-    {
-      "date": "2026-11-04",
-      "steps": 2261,
-      "calories_total": 3033,
-      "calories_active": 956,
-      "resting_hr_bpm": 112,
-      "stress_avg": null,
-      "body_battery_high": 57,
-      "body_battery_low": 51,
-      "body_battery_charged": 0,
-      "body_battery_drained": 6,
-      "intensity_moderate_min": 0,
-      "intensity_vigorous_min": 0,
-      "vo2_max": 65.0
-    },
     {
       "date": "2026-11-05",
       "steps": 5023,
@@ -204,6 +189,11 @@
       "intensity_moderate_min": null,
       "intensity_vigorous_min": null,
       "vo2_max": 64.0
+    },
+    {
+      "date": "2026-11-18",
+      "body_battery_charged": null,
+      "body_battery_drained": null
     }
   ],
   "activities": [
@@ -446,70 +436,22 @@
       },
       "calories": 352.0,
       "elevation_gain_m": 33.0
-    },
-    {
-      "id": 24967018726,
-      "name": "Zwift - 60m in the fika zone",
-      "type": "virtual_ride",
-      "start_local": "2026-11-04 12:26:15",
-      "duration_s": 3635.0,
-      "distance_m": 32688.220703125,
-      "distance_km": 32.688,
-      "avg_hr_bpm": 138.0,
-      "max_hr_bpm": 150.0,
-      "avg_pace_min_per_km": 1.85,
-      "training_load": 60.583526611328125,
-      "aerobic_te": 2.799999952316284,
-      "anaerobic_te": 0.0,
-      "hr_zone_min": {
-        "z1": 0.7,
-        "z2": 56.8,
-        "z3": 2.9,
-        "z4": 0.0,
-        "z5": 0.0
-      },
-      "calories": 676.0,
-      "elevation_gain_m": 361.0
-    },
-    {
-      "id": 24962405968,
-      "name": "Styrka",
-      "type": "strength_training",
-      "start_local": "2026-11-04 10:45:11",
-      "duration_s": 3237.031005859375,
-      "distance_m": 0.0,
-      "distance_km": null,
-      "avg_hr_bpm": 117.0,
-      "max_hr_bpm": 149.0,
-      "avg_pace_min_per_km": null,
-      "training_load": null,
-      "aerobic_te": null,
-      "anaerobic_te": null,
-      "hr_zone_min": {
-        "z1": 34.7,
-        "z2": 14.9,
-        "z3": 0.6,
-        "z4": 0.0,
-        "z5": 0.0
-      },
-      "calories": 385.0,
-      "elevation_gain_m": null
     }
   ],
   "aggregates": {
-    "activity_count": 12,
-    "total_duration_s": 52341.9,
-    "total_distance_km": 340.174,
-    "total_training_load": 1005.6,
+    "activity_count": 10,
+    "total_duration_s": 45469.9,
+    "total_distance_km": 307.486,
+    "total_training_load": 945.0,
     "activities_by_type": {
-      "virtual_ride": 6,
-      "strength_training": 4,
+      "virtual_ride": 5,
+      "strength_training": 3,
       "gravel_cycling": 1,
       "running": 1
     },
     "avg_sleep_score": null,
     "avg_hrv_last_night_ms": null,
-    "avg_resting_hr_bpm": 104.0,
+    "avg_resting_hr_bpm": 102.0,
     "avg_stress": 17.0,
     "fitness_age": {
       "chronologicalAge": 31,
@@ -536,7 +478,7 @@
           "lastMeasurementDate": "2026-05-29"
         }
       },
-      "lastUpdated": "2026-11-17T00:00:00.0"
+      "lastUpdated": "2026-11-18T00:00:00.0"
     },
     "recovery": {
       "latest_date": "2026-11-15",
@@ -553,28 +495,28 @@
     "No scored sleep nights in range (often empty until daily watch wear).",
     "No HRV averages in range (needs overnight HRV-capable wear)."
   ],
-  "generated_at": "2026-11-17T21:04:29.371983+00:00",
+  "generated_at": "2026-11-18T02:51:58.801943+00:00",
   "athlete": {
     "name": "3438c958-8aa9-4725-8600-e917bf16a894"
   },
   "summary": {
     "range": {
-      "start": "2026-11-04",
-      "end": "2026-11-17"
+      "start": "2026-11-05",
+      "end": "2026-11-18"
     },
-    "workouts": 12,
-    "hours": 14.54,
-    "distance_km": 340.174,
-    "training_load": 1005.6,
+    "workouts": 10,
+    "hours": 12.63,
+    "distance_km": 307.486,
+    "training_load": 945.0,
     "activities_by_type": {
-      "virtual_ride": 6,
-      "strength_training": 4,
+      "virtual_ride": 5,
+      "strength_training": 3,
       "gravel_cycling": 1,
       "running": 1
     },
     "avg_sleep_score": null,
     "avg_hrv_last_night_ms": null,
-    "avg_resting_hr_bpm": 104.0,
+    "avg_resting_hr_bpm": 102.0,
     "avg_stress": 17.0,
     "recovery_qualitative": "poor",
     "recovery": {
@@ -695,28 +637,6 @@
       "distance_km": 4.849,
       "training_load": null,
       "avg_hr_bpm": 141.0,
-      "aerobic_te": null,
-      "anaerobic_te": null
-    },
-    {
-      "date": "2026-11-04",
-      "name": "Zwift - 60m in the fika zone",
-      "type": "virtual_ride",
-      "duration_min": 60.6,
-      "distance_km": 32.688,
-      "training_load": 60.583526611328125,
-      "avg_hr_bpm": 138.0,
-      "aerobic_te": 2.799999952316284,
-      "anaerobic_te": 0.0
-    },
-    {
-      "date": "2026-11-04",
-      "name": "Styrka",
-      "type": "strength_training",
-      "duration_min": 54.0,
-      "distance_km": null,
-      "training_load": null,
-      "avg_hr_bpm": 117.0,
       "aerobic_te": null,
       "anaerobic_te": null
     }
