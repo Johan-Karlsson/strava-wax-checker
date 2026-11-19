@@ -1,10 +1,10 @@
 {
   "schema_version": "1.0",
   "source": "garmin-connect-personal-api",
-  "fetched_at": "2026-11-18T19:18:40.019551+00:00",
+  "fetched_at": "2026-11-19T01:17:47.411190+00:00",
   "range": {
-    "start": "2026-11-05",
-    "end": "2026-11-18"
+    "start": "2026-11-06",
+    "end": "2026-11-19"
   },
   "availability": {
     "profile": {
@@ -39,21 +39,6 @@
     "display_name": "3438c958-8aa9-4725-8600-e917bf16a894"
   },
   "daily": [
-    {
-      "date": "2026-11-05",
-      "steps": 5023,
-      "calories_total": 2409,
-      "calories_active": 332,
-      "resting_hr_bpm": 127,
-      "stress_avg": 17,
-      "body_battery_high": 33,
-      "body_battery_low": 27,
-      "body_battery_charged": 1,
-      "body_battery_drained": 6,
-      "intensity_moderate_min": 11,
-      "intensity_vigorous_min": 0,
-      "vo2_max": 66.0
-    },
     {
       "date": "2026-11-06",
       "steps": null,
@@ -204,6 +189,11 @@
       "intensity_moderate_min": 0,
       "intensity_vigorous_min": 0,
       "vo2_max": 64.0
+    },
+    {
+      "date": "2026-11-19",
+      "body_battery_charged": null,
+      "body_battery_drained": null
     }
   ],
   "activities": [
@@ -470,46 +460,21 @@
       },
       "calories": 2780.0,
       "elevation_gain_m": 1015.0
-    },
-    {
-      "id": 24977996941,
-      "name": "Gothenburg Running",
-      "type": "running",
-      "start_local": "2026-11-05 17:58:45",
-      "duration_s": 1655.738037109375,
-      "distance_m": 4848.9501953125,
-      "distance_km": 4.849,
-      "avg_hr_bpm": 141.0,
-      "max_hr_bpm": 155.0,
-      "avg_pace_min_per_km": 5.69,
-      "training_load": null,
-      "aerobic_te": null,
-      "anaerobic_te": null,
-      "hr_zone_min": {
-        "z1": 0.3,
-        "z2": 21.2,
-        "z3": 5.8,
-        "z4": 0.0,
-        "z5": 0.0
-      },
-      "calories": 352.0,
-      "elevation_gain_m": 33.0
     }
   ],
   "aggregates": {
-    "activity_count": 12,
-    "total_duration_s": 52773.4,
-    "total_distance_km": 365.471,
+    "activity_count": 11,
+    "total_duration_s": 51117.6,
+    "total_distance_km": 360.622,
     "total_training_load": 1144.2,
     "activities_by_type": {
       "virtual_ride": 6,
       "strength_training": 4,
-      "gravel_cycling": 1,
-      "running": 1
+      "gravel_cycling": 1
     },
     "avg_sleep_score": null,
     "avg_hrv_last_night_ms": null,
-    "avg_resting_hr_bpm": 105.4,
+    "avg_resting_hr_bpm": 100.0,
     "avg_stress": 17.0,
     "fitness_age": {
       "chronologicalAge": 31,
@@ -521,7 +486,7 @@
           ]
         },
         "rhr": {
-          "value": 90,
+          "value": 91,
           "stale": false
         },
         "vigorousMinutesAvg": {
@@ -536,7 +501,7 @@
           "lastMeasurementDate": "2026-05-29"
         }
       },
-      "lastUpdated": "2026-11-18T00:00:00.0"
+      "lastUpdated": "2026-11-19T00:00:00.0"
     },
     "recovery": {
       "latest_date": "2026-11-18",
@@ -553,28 +518,27 @@
     "No scored sleep nights in range (often empty until daily watch wear).",
     "No HRV averages in range (needs overnight HRV-capable wear)."
   ],
-  "generated_at": "2026-11-18T19:18:40.019551+00:00",
+  "generated_at": "2026-11-19T01:17:47.411190+00:00",
   "athlete": {
     "name": "3438c958-8aa9-4725-8600-e917bf16a894"
   },
   "summary": {
     "range": {
-      "start": "2026-11-05",
-      "end": "2026-11-18"
+      "start": "2026-11-06",
+      "end": "2026-11-19"
     },
-    "workouts": 12,
-    "hours": 14.66,
-    "distance_km": 365.471,
+    "workouts": 11,
+    "hours": 14.2,
+    "distance_km": 360.622,
     "training_load": 1144.2,
     "activities_by_type": {
       "virtual_ride": 6,
       "strength_training": 4,
-      "gravel_cycling": 1,
-      "running": 1
+      "gravel_cycling": 1
     },
     "avg_sleep_score": null,
     "avg_hrv_last_night_ms": null,
-    "avg_resting_hr_bpm": 105.4,
+    "avg_resting_hr_bpm": 100.0,
     "avg_stress": 17.0,
     "recovery_qualitative": "adequate",
     "recovery": {
@@ -708,17 +672,6 @@
       "avg_hr_bpm": 142.0,
       "aerobic_te": 4.099999904632568,
       "anaerobic_te": 1.100000023841858
-    },
-    {
-      "date": "2026-11-05",
-      "name": "Gothenburg Running",
-      "type": "running",
-      "duration_min": 27.6,
-      "distance_km": 4.849,
-      "training_load": null,
-      "avg_hr_bpm": 141.0,
-      "aerobic_te": null,
-      "anaerobic_te": null
     }
   ],
   "purpose": "agent-coaching",

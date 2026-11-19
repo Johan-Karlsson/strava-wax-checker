@@ -1,14 +1,14 @@
 # Training Summary — 3438c958-8aa9-4725-8600-e917bf16a894
 
-Generated: 2026-11-18T19:18:40.019551+00:00
-Range: 2026-11-05 → 2026-11-18
+Generated: 2026-11-19T01:17:47.411190+00:00
+Range: 2026-11-06 → 2026-11-19
 
 ## Summary
-- Workouts: 12
-- Time: 14.66 h
-- Distance: 365.471 km
+- Workouts: 11
+- Time: 14.2 h
+- Distance: 360.622 km
 - Training load: 1144.2
-- Activities by type: {'virtual_ride': 6, 'strength_training': 4, 'gravel_cycling': 1, 'running': 1}
+- Activities by type: {'virtual_ride': 6, 'strength_training': 4, 'gravel_cycling': 1}
 
 ## Recovery
 - Qualitative: adequate
@@ -29,7 +29,6 @@ Range: 2026-11-05 → 2026-11-18
 - 2026-11-08: virtual_ride — Zwift - 60m in the fika zone, 60.2 min, 12.782 km, load 56.077423095703125
 - 2026-11-08: strength_training — Styrka, 39.0 min, None km, load None
 - 2026-11-07: gravel_cycling — Gothenburg Gravel/Unpaved Cycling, 219.1 min, 93.576 km, load 198.09519958496094
-- 2026-11-05: running — Gothenburg Running, 27.6 min, 4.849 km, load None
 
 ## Notes
 - Training Readiness / Training Status are not in Personal API; aggregates.recovery.qualitative is a local heuristic.
