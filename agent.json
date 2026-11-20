@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "garmin-connect-personal-api",
-  "fetched_at": "2026-11-20T00:11:28.013609+00:00",
+  "fetched_at": "2026-11-20T07:24:34.049603+00:00",
   "range": {
     "start": "2026-11-07",
     "end": "2026-11-20"
@@ -509,7 +509,7 @@
     "No scored sleep nights in range (often empty until daily watch wear).",
     "No HRV averages in range (needs overnight HRV-capable wear)."
   ],
-  "generated_at": "2026-11-20T00:11:28.013609+00:00",
+  "generated_at": "2026-11-20T07:24:34.049603+00:00",
   "athlete": {
     "name": "3438c958-8aa9-4725-8600-e917bf16a894"
   },
