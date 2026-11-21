@@ -1,6 +1,6 @@
 # Training Summary — 3438c958-8aa9-4725-8600-e917bf16a894
 
-Generated: 2026-11-21T18:15:43.336525+00:00
+Generated: 2026-11-21T23:25:28.466480+00:00
 Range: 2026-11-08 → 2026-11-21
 
 ## Summary
@@ -11,11 +11,11 @@ Range: 2026-11-08 → 2026-11-21
 - Activities by type: {'strength_training': 5, 'virtual_ride': 7}
 
 ## Recovery
-- Qualitative: adequate
+- Qualitative: strong
 - Sleep score: None
 - HRV (last night): None ms
 - Body Battery high: 84
-- Stress avg: 45
+- Stress avg: 16
 
 ## Recent Activities
 - 2026-11-21: strength_training — Strength, 50.2 min, None km, load 30.589385986328125

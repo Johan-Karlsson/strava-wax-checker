@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "garmin-connect-personal-api",
-  "fetched_at": "2026-11-21T18:15:43.336525+00:00",
+  "fetched_at": "2026-11-21T23:25:28.466480+00:00",
   "range": {
     "start": "2026-11-08",
     "end": "2026-11-21"
@@ -173,17 +173,17 @@
     },
     {
       "date": "2026-11-21",
-      "steps": 744,
-      "calories_total": 2653,
-      "calories_active": 1167,
-      "resting_hr_bpm": 82,
-      "stress_avg": 45,
+      "steps": 3077,
+      "calories_total": 3372,
+      "calories_active": 1537,
+      "resting_hr_bpm": 65,
+      "stress_avg": 16,
       "body_battery_high": 84,
-      "body_battery_low": 79,
-      "body_battery_charged": 0,
-      "body_battery_drained": 5,
-      "intensity_moderate_min": 1,
-      "intensity_vigorous_min": 0,
+      "body_battery_low": 66,
+      "body_battery_charged": 5,
+      "body_battery_drained": 18,
+      "intensity_moderate_min": 29,
+      "intensity_vigorous_min": 22,
       "vo2_max": 65.0
     }
   ],
@@ -488,34 +488,34 @@
     },
     "avg_sleep_score": null,
     "avg_hrv_last_night_ms": null,
-    "avg_resting_hr_bpm": 96.4,
-    "avg_stress": 26.33,
+    "avg_resting_hr_bpm": 93.0,
+    "avg_stress": 16.67,
     "fitness_age": {
       "chronologicalAge": 31,
-      "fitnessAge": 30.25221684504467,
+      "fitnessAge": 30.09019988082415,
       "achievableFitnessAge": 24.25764081126586,
       "components": {
         "vigorousDaysAvg": {
           "value": 0.0,
           "targetValue": 3,
-          "potentialAge": 28.137111009629898,
-          "priority": 3,
+          "potentialAge": 27.93353181866358,
+          "priority": 2,
           "stale": false,
           "numOfWeeksForIm": 6
         },
         "rhr": {
-          "value": 90,
+          "value": 88,
           "targetValue": 65,
-          "improvementValue": 25,
+          "improvementValue": 23,
           "potentialAge": 27.94269581564222,
-          "priority": 1,
+          "priority": 3,
           "stale": false
         },
         "vigorousMinutesAvg": {
-          "value": 0.0,
+          "value": 3.6,
           "targetValue": 75,
-          "potentialAge": 28.137111009629898,
-          "priority": 2,
+          "potentialAge": 27.93353181866358,
+          "priority": 1,
           "stale": false,
           "numOfWeeksForIm": 6
         },
@@ -523,7 +523,7 @@
           "value": 21.5,
           "targetValue": 20.9,
           "improvementValue": 0.6,
-          "potentialAge": 29.81788953811871,
+          "potentialAge": 29.638066248753617,
           "priority": 4,
           "stale": false,
           "lastMeasurementDate": "2026-11-21"
@@ -537,8 +537,8 @@
       "hrv_last_night_ms": null,
       "hrv_vs_baseline": "unknown",
       "body_battery_high": 84,
-      "stress_avg": 45,
-      "qualitative": "adequate"
+      "stress_avg": 16,
+      "qualitative": "strong"
     }
   },
   "notes": [
@@ -546,7 +546,7 @@
     "No scored sleep nights in range (often empty until daily watch wear).",
     "No HRV averages in range (needs overnight HRV-capable wear)."
   ],
-  "generated_at": "2026-11-21T18:15:43.336525+00:00",
+  "generated_at": "2026-11-21T23:25:28.466480+00:00",
   "athlete": {
     "name": "3438c958-8aa9-4725-8600-e917bf16a894"
   },
@@ -565,17 +565,17 @@
     },
     "avg_sleep_score": null,
     "avg_hrv_last_night_ms": null,
-    "avg_resting_hr_bpm": 96.4,
-    "avg_stress": 26.33,
-    "recovery_qualitative": "adequate",
+    "avg_resting_hr_bpm": 93.0,
+    "avg_stress": 16.67,
+    "recovery_qualitative": "strong",
     "recovery": {
       "latest_date": "2026-11-21",
       "sleep_score": null,
       "hrv_last_night_ms": null,
       "hrv_vs_baseline": "unknown",
       "body_battery_high": 84,
-      "stress_avg": 45,
-      "qualitative": "adequate"
+      "stress_avg": 16,
+      "qualitative": "strong"
     }
   },
   "recent_activities": [
