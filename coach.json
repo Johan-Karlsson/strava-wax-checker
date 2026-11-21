@@ -1,10 +1,10 @@
 {
   "schema_version": "1.0",
   "source": "garmin-connect-personal-api",
-  "fetched_at": "2026-11-20T22:42:14.994080+00:00",
+  "fetched_at": "2026-11-21T03:31:27.783734+00:00",
   "range": {
-    "start": "2026-11-07",
-    "end": "2026-11-20"
+    "start": "2026-11-08",
+    "end": "2026-11-21"
   },
   "availability": {
     "profile": {
@@ -39,21 +39,6 @@
     "display_name": "3438c958-8aa9-4725-8600-e917bf16a894"
   },
   "daily": [
-    {
-      "date": "2026-11-07",
-      "steps": null,
-      "calories_total": 2469,
-      "calories_active": 2469,
-      "resting_hr_bpm": null,
-      "stress_avg": null,
-      "body_battery_high": null,
-      "body_battery_low": null,
-      "body_battery_charged": null,
-      "body_battery_drained": null,
-      "intensity_moderate_min": null,
-      "intensity_vigorous_min": null,
-      "vo2_max": 65.0
-    },
     {
       "date": "2026-11-08",
       "steps": 2802,
@@ -183,6 +168,11 @@
     },
     {
       "date": "2026-11-20",
+      "body_battery_charged": null,
+      "body_battery_drained": null
+    },
+    {
+      "date": "2026-11-21",
       "body_battery_charged": null,
       "body_battery_drained": null
     }
@@ -427,41 +417,16 @@
       },
       "calories": 216.0,
       "elevation_gain_m": null
-    },
-    {
-      "id": 24997073230,
-      "name": "Gothenburg Gravel/Unpaved Cycling",
-      "type": "gravel_cycling",
-      "start_local": "2026-11-07 08:45:36",
-      "duration_s": 13145.2216796875,
-      "distance_m": 93575.546875,
-      "distance_km": 93.576,
-      "avg_hr_bpm": 142.0,
-      "max_hr_bpm": 167.0,
-      "avg_pace_min_per_km": 2.34,
-      "training_load": 198.09519958496094,
-      "aerobic_te": 4.099999904632568,
-      "anaerobic_te": 1.100000023841858,
-      "hr_zone_min": {
-        "z1": 10.4,
-        "z2": 123.5,
-        "z3": 81.1,
-        "z4": 3.5,
-        "z5": 0.0
-      },
-      "calories": 2780.0,
-      "elevation_gain_m": 1015.0
     }
   ],
   "aggregates": {
-    "activity_count": 11,
-    "total_duration_s": 51117.6,
-    "total_distance_km": 360.622,
-    "total_training_load": 1144.2,
+    "activity_count": 10,
+    "total_duration_s": 37972.4,
+    "total_distance_km": 267.046,
+    "total_training_load": 946.1,
     "activities_by_type": {
       "virtual_ride": 6,
-      "strength_training": 4,
-      "gravel_cycling": 1
+      "strength_training": 4
     },
     "avg_sleep_score": null,
     "avg_hrv_last_night_ms": null,
@@ -492,7 +457,7 @@
           "lastMeasurementDate": "2026-05-29"
         }
       },
-      "lastUpdated": "2026-11-20T00:00:00.0"
+      "lastUpdated": "2026-11-21T00:00:00.0"
     },
     "recovery": {
       "latest_date": "2026-11-18",
@@ -509,23 +474,22 @@
     "No scored sleep nights in range (often empty until daily watch wear).",
     "No HRV averages in range (needs overnight HRV-capable wear)."
   ],
-  "generated_at": "2026-11-20T22:42:14.994080+00:00",
+  "generated_at": "2026-11-21T03:31:27.783734+00:00",
   "athlete": {
     "name": "3438c958-8aa9-4725-8600-e917bf16a894"
   },
   "summary": {
     "range": {
-      "start": "2026-11-07",
-      "end": "2026-11-20"
+      "start": "2026-11-08",
+      "end": "2026-11-21"
     },
-    "workouts": 11,
-    "hours": 14.2,
-    "distance_km": 360.622,
-    "training_load": 1144.2,
+    "workouts": 10,
+    "hours": 10.55,
+    "distance_km": 267.046,
+    "training_load": 946.1,
     "activities_by_type": {
       "virtual_ride": 6,
-      "strength_training": 4,
-      "gravel_cycling": 1
+      "strength_training": 4
     },
     "avg_sleep_score": null,
     "avg_hrv_last_night_ms": null,
@@ -652,17 +616,6 @@
       "avg_hr_bpm": 102.0,
       "aerobic_te": null,
       "anaerobic_te": null
-    },
-    {
-      "date": "2026-11-07",
-      "name": "Gothenburg Gravel/Unpaved Cycling",
-      "type": "gravel_cycling",
-      "duration_min": 219.1,
-      "distance_km": 93.576,
-      "training_load": 198.09519958496094,
-      "avg_hr_bpm": 142.0,
-      "aerobic_te": 4.099999904632568,
-      "anaerobic_te": 1.100000023841858
     }
   ],
   "purpose": "agent-coaching",
