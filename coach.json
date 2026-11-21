@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "garmin-connect-personal-api",
-  "fetched_at": "2026-11-21T11:43:01.822850+00:00",
+  "fetched_at": "2026-11-21T18:15:43.336525+00:00",
   "range": {
     "start": "2026-11-08",
     "end": "2026-11-21"
@@ -173,11 +173,69 @@
     },
     {
       "date": "2026-11-21",
-      "body_battery_charged": null,
-      "body_battery_drained": null
+      "steps": 744,
+      "calories_total": 2653,
+      "calories_active": 1167,
+      "resting_hr_bpm": 82,
+      "stress_avg": 45,
+      "body_battery_high": 84,
+      "body_battery_low": 79,
+      "body_battery_charged": 0,
+      "body_battery_drained": 5,
+      "intensity_moderate_min": 1,
+      "intensity_vigorous_min": 0,
+      "vo2_max": 65.0
     }
   ],
   "activities": [
+    {
+      "id": 25154506203,
+      "name": "Strength",
+      "type": "strength_training",
+      "start_local": "2026-11-21 17:04:31",
+      "duration_s": 3012.534912109375,
+      "distance_m": 0.0,
+      "distance_km": null,
+      "avg_hr_bpm": 121.0,
+      "max_hr_bpm": 152.0,
+      "avg_pace_min_per_km": null,
+      "training_load": 30.589385986328125,
+      "aerobic_te": 1.7000000476837158,
+      "anaerobic_te": 0.6000000238418579,
+      "hr_zone_min": {
+        "z1": 24.9,
+        "z2": 20.5,
+        "z3": 2.0,
+        "z4": 0.0,
+        "z5": 0.0
+      },
+      "calories": 427.0,
+      "elevation_gain_m": null
+    },
+    {
+      "id": 25150782588,
+      "name": "Zwift -  3x20min",
+      "type": "virtual_ride",
+      "start_local": "2026-11-21 11:12:58",
+      "duration_s": 5503.0,
+      "distance_m": 58518.16015625,
+      "distance_km": 58.518,
+      "avg_hr_bpm": 160.0,
+      "max_hr_bpm": 176.0,
+      "avg_pace_min_per_km": 1.57,
+      "training_load": 215.2643280029297,
+      "aerobic_te": 4.400000095367432,
+      "anaerobic_te": 0.0,
+      "hr_zone_min": {
+        "z1": 2.0,
+        "z2": 15.5,
+        "z3": 15.9,
+        "z4": 58.2,
+        "z5": 0.0
+      },
+      "calories": 1233.0,
+      "elevation_gain_m": 285.0
+    },
     {
       "id": 25122695008,
       "name": "Zwift - Tempo 3x20min",
@@ -420,52 +478,66 @@
     }
   ],
   "aggregates": {
-    "activity_count": 10,
-    "total_duration_s": 37972.4,
-    "total_distance_km": 267.046,
-    "total_training_load": 946.1,
+    "activity_count": 12,
+    "total_duration_s": 46487.9,
+    "total_distance_km": 325.564,
+    "total_training_load": 1192.0,
     "activities_by_type": {
-      "virtual_ride": 6,
-      "strength_training": 4
+      "strength_training": 5,
+      "virtual_ride": 7
     },
     "avg_sleep_score": null,
     "avg_hrv_last_night_ms": null,
-    "avg_resting_hr_bpm": 100.0,
-    "avg_stress": 17.0,
+    "avg_resting_hr_bpm": 96.4,
+    "avg_stress": 26.33,
     "fitness_age": {
       "chronologicalAge": 31,
+      "fitnessAge": 30.25221684504467,
+      "achievableFitnessAge": 24.25764081126586,
       "components": {
         "vigorousDaysAvg": {
-          "stale": true,
-          "staleInputs": [
-            "VIGOROUS_DAYS"
-          ]
+          "value": 0.0,
+          "targetValue": 3,
+          "potentialAge": 28.137111009629898,
+          "priority": 3,
+          "stale": false,
+          "numOfWeeksForIm": 6
         },
         "rhr": {
-          "value": 91,
+          "value": 90,
+          "targetValue": 65,
+          "improvementValue": 25,
+          "potentialAge": 27.94269581564222,
+          "priority": 1,
           "stale": false
         },
         "vigorousMinutesAvg": {
-          "stale": true,
-          "staleInputs": [
-            "VIGOROUS_MINUTES"
-          ]
+          "value": 0.0,
+          "targetValue": 75,
+          "potentialAge": 28.137111009629898,
+          "priority": 2,
+          "stale": false,
+          "numOfWeeksForIm": 6
         },
         "bmi": {
-          "value": 21.2,
+          "value": 21.5,
+          "targetValue": 20.9,
+          "improvementValue": 0.6,
+          "potentialAge": 29.81788953811871,
+          "priority": 4,
           "stale": false,
-          "lastMeasurementDate": "2026-05-29"
+          "lastMeasurementDate": "2026-11-21"
         }
       },
       "lastUpdated": "2026-11-21T00:00:00.0"
     },
     "recovery": {
-      "latest_date": "2026-11-18",
+      "latest_date": "2026-11-21",
       "sleep_score": null,
       "hrv_last_night_ms": null,
       "hrv_vs_baseline": "unknown",
-      "body_battery_high": 60,
-      "stress_avg": null,
+      "body_battery_high": 84,
+      "stress_avg": 45,
       "qualitative": "adequate"
     }
   },
@@ -474,7 +546,7 @@
     "No scored sleep nights in range (often empty until daily watch wear).",
     "No HRV averages in range (needs overnight HRV-capable wear)."
   ],
-  "generated_at": "2026-11-21T11:43:01.822850+00:00",
+  "generated_at": "2026-11-21T18:15:43.336525+00:00",
   "athlete": {
     "name": "3438c958-8aa9-4725-8600-e917bf16a894"
   },
@@ -483,30 +555,52 @@
       "start": "2026-11-08",
       "end": "2026-11-21"
     },
-    "workouts": 10,
-    "hours": 10.55,
-    "distance_km": 267.046,
-    "training_load": 946.1,
+    "workouts": 12,
+    "hours": 12.91,
+    "distance_km": 325.564,
+    "training_load": 1192.0,
     "activities_by_type": {
-      "virtual_ride": 6,
-      "strength_training": 4
+      "strength_training": 5,
+      "virtual_ride": 7
     },
     "avg_sleep_score": null,
     "avg_hrv_last_night_ms": null,
-    "avg_resting_hr_bpm": 100.0,
-    "avg_stress": 17.0,
+    "avg_resting_hr_bpm": 96.4,
+    "avg_stress": 26.33,
     "recovery_qualitative": "adequate",
     "recovery": {
-      "latest_date": "2026-11-18",
+      "latest_date": "2026-11-21",
       "sleep_score": null,
       "hrv_last_night_ms": null,
       "hrv_vs_baseline": "unknown",
-      "body_battery_high": 60,
-      "stress_avg": null,
+      "body_battery_high": 84,
+      "stress_avg": 45,
       "qualitative": "adequate"
     }
   },
   "recent_activities": [
+    {
+      "date": "2026-11-21",
+      "name": "Strength",
+      "type": "strength_training",
+      "duration_min": 50.2,
+      "distance_km": null,
+      "training_load": 30.589385986328125,
+      "avg_hr_bpm": 121.0,
+      "aerobic_te": 1.7000000476837158,
+      "anaerobic_te": 0.6000000238418579
+    },
+    {
+      "date": "2026-11-21",
+      "name": "Zwift -  3x20min",
+      "type": "virtual_ride",
+      "duration_min": 91.7,
+      "distance_km": 58.518,
+      "training_load": 215.2643280029297,
+      "avg_hr_bpm": 160.0,
+      "aerobic_te": 4.400000095367432,
+      "anaerobic_te": 0.0
+    },
     {
       "date": "2026-11-18",
       "name": "Zwift - Tempo 3x20min",
