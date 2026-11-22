@@ -1,14 +1,14 @@
 # Training Summary — 3438c958-8aa9-4725-8600-e917bf16a894
 
-Generated: 2026-11-21T23:25:28.466480+00:00
-Range: 2026-11-08 → 2026-11-21
+Generated: 2026-11-22T03:21:15.413280+00:00
+Range: 2026-11-09 → 2026-11-22
 
 ## Summary
-- Workouts: 12
-- Time: 12.91 h
-- Distance: 325.564 km
-- Training load: 1192.0
-- Activities by type: {'strength_training': 5, 'virtual_ride': 7}
+- Workouts: 10
+- Time: 11.26 h
+- Distance: 312.782 km
+- Training load: 1135.9
+- Activities by type: {'strength_training': 4, 'virtual_ride': 6}
 
 ## Recovery
 - Qualitative: strong
@@ -28,8 +28,6 @@ Range: 2026-11-08 → 2026-11-21
 - 2026-11-12: virtual_ride — Zwift - Z2 wave 90min, 90.4 min, 52.586 km, load 80.52812194824219
 - 2026-11-11: strength_training — Styrka, 51.0 min, None km, load None
 - 2026-11-10: virtual_ride — Zwift - Sweet Spot 3x20min, 65.2 min, 44.191 km, load 220.8938446044922
-- 2026-11-08: virtual_ride — Zwift - 60m in the fika zone, 60.2 min, 12.782 km, load 56.077423095703125
-- 2026-11-08: strength_training — Styrka, 39.0 min, None km, load None
 
 ## Notes
 - Training Readiness / Training Status are not in Personal API; aggregates.recovery.qualitative is a local heuristic.
