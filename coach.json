@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "garmin-connect-personal-api",
-  "fetched_at": "2026-11-22T11:46:20.132266+00:00",
+  "fetched_at": "2026-11-22T18:40:30.473856+00:00",
   "range": {
     "start": "2026-11-09",
     "end": "2026-11-22"
@@ -174,15 +174,15 @@
     },
     {
       "date": "2026-11-22",
-      "steps": 28,
-      "calories_total": 670,
-      "calories_active": 0,
+      "steps": 1434,
+      "calories_total": 2511,
+      "calories_active": 1040,
       "resting_hr_bpm": 47,
-      "stress_avg": 9,
+      "stress_avg": 16,
       "body_battery_high": 100,
-      "body_battery_low": 81,
+      "body_battery_low": 71,
       "body_battery_charged": 19,
-      "body_battery_drained": 0,
+      "body_battery_drained": 29,
       "intensity_moderate_min": 0,
       "intensity_vigorous_min": 0,
       "sleep_score": 85,
@@ -200,6 +200,54 @@
     }
   ],
   "activities": [
+    {
+      "id": 25164501011,
+      "name": "Zwift - Z2 wave 90min",
+      "type": "virtual_ride",
+      "start_local": "2026-11-22 15:15:53",
+      "duration_s": 5462.0,
+      "distance_m": 56332.8515625,
+      "distance_km": 56.333,
+      "avg_hr_bpm": 130.0,
+      "max_hr_bpm": 141.0,
+      "avg_pace_min_per_km": 1.62,
+      "training_load": 72.90969848632812,
+      "aerobic_te": 3.0,
+      "anaerobic_te": 0.0,
+      "hr_zone_min": {
+        "z1": 3.6,
+        "z2": 86.4,
+        "z3": 0.0,
+        "z4": 0.0,
+        "z5": 0.0
+      },
+      "calories": 987.0,
+      "elevation_gain_m": 85.0
+    },
+    {
+      "id": 25162873292,
+      "name": "Gothenburg Gravel/Unpaved Cycling",
+      "type": "gravel_cycling",
+      "start_local": "2026-11-22 14:03:18",
+      "duration_s": 975.2890014648438,
+      "distance_m": 6877.4501953125,
+      "distance_km": 6.877,
+      "avg_hr_bpm": 132.0,
+      "max_hr_bpm": 152.0,
+      "avg_pace_min_per_km": 2.36,
+      "training_load": 27.187423706054688,
+      "aerobic_te": 1.7000000476837158,
+      "anaerobic_te": 0.4000000059604645,
+      "hr_zone_min": {
+        "z1": 1.8,
+        "z2": 13.9,
+        "z3": 0.5,
+        "z4": 0.0,
+        "z5": 0.0
+      },
+      "calories": 195.0,
+      "elevation_gain_m": 38.0
+    },
     {
       "id": 25154506203,
       "name": "Strength",
@@ -442,18 +490,19 @@
     }
   ],
   "aggregates": {
-    "activity_count": 10,
-    "total_duration_s": 40534.5,
-    "total_distance_km": 312.782,
-    "total_training_load": 1135.9,
+    "activity_count": 12,
+    "total_duration_s": 46971.8,
+    "total_distance_km": 375.992,
+    "total_training_load": 1236.0,
     "activities_by_type": {
-      "strength_training": 4,
-      "virtual_ride": 6
+      "virtual_ride": 7,
+      "gravel_cycling": 1,
+      "strength_training": 4
     },
     "avg_sleep_score": 85.0,
     "avg_hrv_last_night_ms": 50.0,
     "avg_resting_hr_bpm": 86.6,
-    "avg_stress": 13.0,
+    "avg_stress": 15.33,
     "fitness_age": {
       "chronologicalAge": 31,
       "fitnessAge": 29.653307678727714,
@@ -502,14 +551,14 @@
       "hrv_last_night_ms": 50,
       "hrv_vs_baseline": "unknown",
       "body_battery_high": 100,
-      "stress_avg": 9,
+      "stress_avg": 16,
       "qualitative": "strong"
     }
   },
   "notes": [
     "Training Readiness / Training Status are not in Personal API; aggregates.recovery.qualitative is a local heuristic."
   ],
-  "generated_at": "2026-11-22T11:46:20.132266+00:00",
+  "generated_at": "2026-11-22T18:40:30.473856+00:00",
   "athlete": {
     "name": "3438c958-8aa9-4725-8600-e917bf16a894"
   },
@@ -518,18 +567,19 @@
       "start": "2026-11-09",
       "end": "2026-11-22"
     },
-    "workouts": 10,
-    "hours": 11.26,
-    "distance_km": 312.782,
-    "training_load": 1135.9,
+    "workouts": 12,
+    "hours": 13.05,
+    "distance_km": 375.992,
+    "training_load": 1236.0,
     "activities_by_type": {
-      "strength_training": 4,
-      "virtual_ride": 6
+      "virtual_ride": 7,
+      "gravel_cycling": 1,
+      "strength_training": 4
     },
     "avg_sleep_score": 85.0,
     "avg_hrv_last_night_ms": 50.0,
     "avg_resting_hr_bpm": 86.6,
-    "avg_stress": 13.0,
+    "avg_stress": 15.33,
     "recovery_qualitative": "strong",
     "recovery": {
       "latest_date": "2026-11-22",
@@ -537,11 +587,33 @@
       "hrv_last_night_ms": 50,
       "hrv_vs_baseline": "unknown",
       "body_battery_high": 100,
-      "stress_avg": 9,
+      "stress_avg": 16,
       "qualitative": "strong"
     }
   },
   "recent_activities": [
+    {
+      "date": "2026-11-22",
+      "name": "Zwift - Z2 wave 90min",
+      "type": "virtual_ride",
+      "duration_min": 91.0,
+      "distance_km": 56.333,
+      "training_load": 72.90969848632812,
+      "avg_hr_bpm": 130.0,
+      "aerobic_te": 3.0,
+      "anaerobic_te": 0.0
+    },
+    {
+      "date": "2026-11-22",
+      "name": "Gothenburg Gravel/Unpaved Cycling",
+      "type": "gravel_cycling",
+      "duration_min": 16.3,
+      "distance_km": 6.877,
+      "training_load": 27.187423706054688,
+      "avg_hr_bpm": 132.0,
+      "aerobic_te": 1.7000000476837158,
+      "anaerobic_te": 0.4000000059604645
+    },
     {
       "date": "2026-11-21",
       "name": "Strength",
