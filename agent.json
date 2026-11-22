@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "garmin-connect-personal-api",
-  "fetched_at": "2026-11-22T18:40:30.473856+00:00",
+  "fetched_at": "2026-11-22T23:53:41.415527+00:00",
   "range": {
     "start": "2026-11-09",
     "end": "2026-11-22"
@@ -174,15 +174,15 @@
     },
     {
       "date": "2026-11-22",
-      "steps": 1434,
-      "calories_total": 2511,
-      "calories_active": 1040,
+      "steps": 3067,
+      "calories_total": 3075,
+      "calories_active": 1114,
       "resting_hr_bpm": 47,
-      "stress_avg": 16,
+      "stress_avg": 18,
       "body_battery_high": 100,
-      "body_battery_low": 71,
-      "body_battery_charged": 19,
-      "body_battery_drained": 29,
+      "body_battery_low": 30,
+      "body_battery_charged": 25,
+      "body_battery_drained": 37,
       "intensity_moderate_min": 0,
       "intensity_vigorous_min": 0,
       "sleep_score": 85,
@@ -502,7 +502,7 @@
     "avg_sleep_score": 85.0,
     "avg_hrv_last_night_ms": 50.0,
     "avg_resting_hr_bpm": 86.6,
-    "avg_stress": 15.33,
+    "avg_stress": 16.0,
     "fitness_age": {
       "chronologicalAge": 31,
       "fitnessAge": 29.653307678727714,
@@ -551,14 +551,14 @@
       "hrv_last_night_ms": 50,
       "hrv_vs_baseline": "unknown",
       "body_battery_high": 100,
-      "stress_avg": 16,
+      "stress_avg": 18,
       "qualitative": "strong"
     }
   },
   "notes": [
     "Training Readiness / Training Status are not in Personal API; aggregates.recovery.qualitative is a local heuristic."
   ],
-  "generated_at": "2026-11-22T18:40:30.473856+00:00",
+  "generated_at": "2026-11-22T23:53:41.415527+00:00",
   "athlete": {
     "name": "3438c958-8aa9-4725-8600-e917bf16a894"
   },
@@ -579,7 +579,7 @@
     "avg_sleep_score": 85.0,
     "avg_hrv_last_night_ms": 50.0,
     "avg_resting_hr_bpm": 86.6,
-    "avg_stress": 15.33,
+    "avg_stress": 16.0,
     "recovery_qualitative": "strong",
     "recovery": {
       "latest_date": "2026-11-22",
@@ -587,7 +587,7 @@
       "hrv_last_night_ms": 50,
       "hrv_vs_baseline": "unknown",
       "body_battery_high": 100,
-      "stress_avg": 16,
+      "stress_avg": 18,
       "qualitative": "strong"
     }
   },
