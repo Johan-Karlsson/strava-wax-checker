@@ -1,6 +1,6 @@
 # Training Summary — 3438c958-8aa9-4725-8600-e917bf16a894
 
-Generated: 2026-11-22T03:21:15.413280+00:00
+Generated: 2026-11-22T11:46:20.132266+00:00
 Range: 2026-11-09 → 2026-11-22
 
 ## Summary
@@ -12,10 +12,10 @@ Range: 2026-11-09 → 2026-11-22
 
 ## Recovery
 - Qualitative: strong
-- Sleep score: None
-- HRV (last night): None ms
-- Body Battery high: 84
-- Stress avg: 16
+- Sleep score: 85
+- HRV (last night): 50 ms
+- Body Battery high: 100
+- Stress avg: 9
 
 ## Recent Activities
 - 2026-11-21: strength_training — Strength, 50.2 min, None km, load 30.589385986328125
@@ -31,5 +31,3 @@ Range: 2026-11-09 → 2026-11-22
 
 ## Notes
 - Training Readiness / Training Status are not in Personal API; aggregates.recovery.qualitative is a local heuristic.
-- No scored sleep nights in range (often empty until daily watch wear).
-- No HRV averages in range (needs overnight HRV-capable wear).
