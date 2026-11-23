@@ -1,7 +1,7 @@
 # Training Summary — 3438c958-8aa9-4725-8600-e917bf16a894
 
-Generated: 2026-11-22T23:53:41.415527+00:00
-Range: 2026-11-09 → 2026-11-22
+Generated: 2026-11-23T05:18:31.051488+00:00
+Range: 2026-11-10 → 2026-11-23
 
 ## Summary
 - Workouts: 12
@@ -12,10 +12,10 @@ Range: 2026-11-09 → 2026-11-22
 
 ## Recovery
 - Qualitative: strong
-- Sleep score: 85
-- HRV (last night): 50 ms
+- Sleep score: 84
+- HRV (last night): 56 ms
 - Body Battery high: 100
-- Stress avg: 18
+- Stress avg: 9
 
 ## Recent Activities
 - 2026-11-22: virtual_ride — Zwift - Z2 wave 90min, 91.0 min, 56.333 km, load 72.90969848632812
