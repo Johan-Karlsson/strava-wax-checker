@@ -1,6 +1,6 @@
 # Training Summary — 3438c958-8aa9-4725-8600-e917bf16a894
 
-Generated: 2026-11-24T02:55:55.634623+00:00
+Generated: 2026-11-24T13:15:16.852031+00:00
 Range: 2026-11-11 → 2026-11-24
 
 ## Summary
@@ -12,9 +12,9 @@ Range: 2026-11-11 → 2026-11-24
 
 ## Recovery
 - Qualitative: strong
-- Sleep score: None
-- HRV (last night): None ms
-- Body Battery high: 84
+- Sleep score: 86
+- HRV (last night): 59 ms
+- Body Battery high: 100
 - Stress avg: 9
 
 ## Recent Activities
