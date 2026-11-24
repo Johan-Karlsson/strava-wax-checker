@@ -1,21 +1,21 @@
 # Training Summary — 3438c958-8aa9-4725-8600-e917bf16a894
 
-Generated: 2026-11-23T16:10:23.293261+00:00
-Range: 2026-11-10 → 2026-11-23
+Generated: 2026-11-24T02:55:55.634623+00:00
+Range: 2026-11-11 → 2026-11-24
 
 ## Summary
-- Workouts: 12
-- Time: 13.05 h
-- Distance: 375.992 km
-- Training load: 1236.0
-- Activities by type: {'virtual_ride': 7, 'gravel_cycling': 1, 'strength_training': 4}
+- Workouts: 11
+- Time: 11.96 h
+- Distance: 331.801 km
+- Training load: 1015.1
+- Activities by type: {'virtual_ride': 6, 'gravel_cycling': 1, 'strength_training': 4}
 
 ## Recovery
 - Qualitative: strong
-- Sleep score: 84
-- HRV (last night): 56 ms
-- Body Battery high: 100
-- Stress avg: 18
+- Sleep score: None
+- HRV (last night): None ms
+- Body Battery high: 84
+- Stress avg: 9
 
 ## Recent Activities
 - 2026-11-22: virtual_ride — Zwift - Z2 wave 90min, 91.0 min, 56.333 km, load 72.90969848632812
@@ -29,7 +29,6 @@ Range: 2026-11-10 → 2026-11-23
 - 2026-11-15: virtual_ride — Zwift - Minimum VO2max, 45.2 min, 29.428 km, load 280.2152404785156
 - 2026-11-12: virtual_ride — Zwift - Z2 wave 90min, 90.4 min, 52.586 km, load 80.52812194824219
 - 2026-11-11: strength_training — Styrka, 51.0 min, None km, load None
-- 2026-11-10: virtual_ride — Zwift - Sweet Spot 3x20min, 65.2 min, 44.191 km, load 220.8938446044922
 
 ## Notes
 - Training Readiness / Training Status are not in Personal API; aggregates.recovery.qualitative is a local heuristic.

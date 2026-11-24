@@ -1,10 +1,10 @@
 {
   "schema_version": "1.0",
   "source": "garmin-connect-personal-api",
-  "fetched_at": "2026-11-23T16:10:23.293261+00:00",
+  "fetched_at": "2026-11-24T02:55:55.634623+00:00",
   "range": {
-    "start": "2026-11-10",
-    "end": "2026-11-23"
+    "start": "2026-11-11",
+    "end": "2026-11-24"
   },
   "availability": {
     "profile": {
@@ -39,21 +39,6 @@
     "display_name": "3438c958-8aa9-4725-8600-e917bf16a894"
   },
   "daily": [
-    {
-      "date": "2026-11-10",
-      "steps": null,
-      "calories_total": 886,
-      "calories_active": 886,
-      "resting_hr_bpm": null,
-      "stress_avg": null,
-      "body_battery_high": null,
-      "body_battery_low": null,
-      "body_battery_charged": null,
-      "body_battery_drained": null,
-      "intensity_moderate_min": null,
-      "intensity_vigorous_min": null,
-      "vo2_max": 64.0
-    },
     {
       "date": "2026-11-11",
       "steps": 2903,
@@ -195,15 +180,15 @@
     },
     {
       "date": "2026-11-23",
-      "steps": 660,
-      "calories_total": 1419,
-      "calories_active": 8,
-      "resting_hr_bpm": 47,
-      "stress_avg": 18,
+      "steps": 3450,
+      "calories_total": 2189,
+      "calories_active": 100,
+      "resting_hr_bpm": 46,
+      "stress_avg": 17,
       "body_battery_high": 100,
       "body_battery_low": 45,
-      "body_battery_charged": 57,
-      "body_battery_drained": 40,
+      "body_battery_charged": 68,
+      "body_battery_drained": 50,
       "intensity_moderate_min": 0,
       "intensity_vigorous_min": 0,
       "sleep_score": 84,
@@ -218,6 +203,20 @@
       "hrv_status": "NONE",
       "hrv_baseline_low_ms": null,
       "hrv_baseline_high_ms": null
+    },
+    {
+      "date": "2026-11-24",
+      "steps": null,
+      "calories_total": 176,
+      "calories_active": 0,
+      "resting_hr_bpm": 47,
+      "stress_avg": 9,
+      "body_battery_high": 84,
+      "body_battery_low": 63,
+      "body_battery_charged": 21,
+      "body_battery_drained": 0,
+      "intensity_moderate_min": 0,
+      "intensity_vigorous_min": 0
     }
   ],
   "activities": [
@@ -484,51 +483,27 @@
       },
       "calories": 379.0,
       "elevation_gain_m": null
-    },
-    {
-      "id": 25033847313,
-      "name": "Zwift - Sweet Spot 3x20min",
-      "type": "virtual_ride",
-      "start_local": "2026-11-10 17:43:18",
-      "duration_s": 3910.0,
-      "distance_m": 44191.1484375,
-      "distance_km": 44.191,
-      "avg_hr_bpm": 164.0,
-      "max_hr_bpm": 190.0,
-      "avg_pace_min_per_km": 1.47,
-      "training_load": 220.8938446044922,
-      "aerobic_te": 4.400000095367432,
-      "anaerobic_te": 0.0,
-      "hr_zone_min": {
-        "z1": 3.6,
-        "z2": 9.2,
-        "z3": 10.7,
-        "z4": 27.3,
-        "z5": 14.1
-      },
-      "calories": 886.0,
-      "elevation_gain_m": 68.0
     }
   ],
   "aggregates": {
-    "activity_count": 12,
-    "total_duration_s": 46971.8,
-    "total_distance_km": 375.992,
-    "total_training_load": 1236.0,
+    "activity_count": 11,
+    "total_duration_s": 43061.8,
+    "total_distance_km": 331.801,
+    "total_training_load": 1015.1,
     "activities_by_type": {
-      "virtual_ride": 7,
+      "virtual_ride": 6,
       "gravel_cycling": 1,
       "strength_training": 4
     },
     "avg_sleep_score": 84.5,
     "avg_hrv_last_night_ms": 53.0,
-    "avg_resting_hr_bpm": 80.0,
-    "avg_stress": 16.5,
+    "avg_resting_hr_bpm": 75.14,
+    "avg_stress": 14.8,
     "fitness_age": {
       "chronologicalAge": 31,
       "fitnessAge": 29.20729076465499,
       "achievableFitnessAge": 24.25764081126586,
-      "previousFitnessAge": 29.653307678727714,
+      "previousFitnessAge": 29.20729076465499,
       "components": {
         "vigorousDaysAvg": {
           "value": 0.1,
@@ -564,51 +539,51 @@
           "lastMeasurementDate": "2026-11-21"
         }
       },
-      "lastUpdated": "2026-11-23T00:00:00.0"
+      "lastUpdated": "2026-11-24T00:00:00.0"
     },
     "recovery": {
-      "latest_date": "2026-11-23",
-      "sleep_score": 84,
-      "hrv_last_night_ms": 56,
+      "latest_date": "2026-11-24",
+      "sleep_score": null,
+      "hrv_last_night_ms": null,
       "hrv_vs_baseline": "unknown",
-      "body_battery_high": 100,
-      "stress_avg": 18,
+      "body_battery_high": 84,
+      "stress_avg": 9,
       "qualitative": "strong"
     }
   },
   "notes": [
     "Training Readiness / Training Status are not in Personal API; aggregates.recovery.qualitative is a local heuristic."
   ],
-  "generated_at": "2026-11-23T16:10:23.293261+00:00",
+  "generated_at": "2026-11-24T02:55:55.634623+00:00",
   "athlete": {
     "name": "3438c958-8aa9-4725-8600-e917bf16a894"
   },
   "summary": {
     "range": {
-      "start": "2026-11-10",
-      "end": "2026-11-23"
+      "start": "2026-11-11",
+      "end": "2026-11-24"
     },
-    "workouts": 12,
-    "hours": 13.05,
-    "distance_km": 375.992,
-    "training_load": 1236.0,
+    "workouts": 11,
+    "hours": 11.96,
+    "distance_km": 331.801,
+    "training_load": 1015.1,
     "activities_by_type": {
-      "virtual_ride": 7,
+      "virtual_ride": 6,
       "gravel_cycling": 1,
       "strength_training": 4
     },
     "avg_sleep_score": 84.5,
     "avg_hrv_last_night_ms": 53.0,
-    "avg_resting_hr_bpm": 80.0,
-    "avg_stress": 16.5,
+    "avg_resting_hr_bpm": 75.14,
+    "avg_stress": 14.8,
     "recovery_qualitative": "strong",
     "recovery": {
-      "latest_date": "2026-11-23",
-      "sleep_score": 84,
-      "hrv_last_night_ms": 56,
+      "latest_date": "2026-11-24",
+      "sleep_score": null,
+      "hrv_last_night_ms": null,
       "hrv_vs_baseline": "unknown",
-      "body_battery_high": 100,
-      "stress_avg": 18,
+      "body_battery_high": 84,
+      "stress_avg": 9,
       "qualitative": "strong"
     }
   },
@@ -733,17 +708,6 @@
       "avg_hr_bpm": 119.0,
       "aerobic_te": null,
       "anaerobic_te": null
-    },
-    {
-      "date": "2026-11-10",
-      "name": "Zwift - Sweet Spot 3x20min",
-      "type": "virtual_ride",
-      "duration_min": 65.2,
-      "distance_km": 44.191,
-      "training_load": 220.8938446044922,
-      "avg_hr_bpm": 164.0,
-      "aerobic_te": 4.400000095367432,
-      "anaerobic_te": 0.0
     }
   ],
   "purpose": "agent-coaching",
