@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "garmin-connect-personal-api",
-  "fetched_at": "2026-11-24T13:15:16.852031+00:00",
+  "fetched_at": "2026-11-24T23:03:42.195117+00:00",
   "range": {
     "start": "2026-11-11",
     "end": "2026-11-24"
@@ -206,15 +206,15 @@
     },
     {
       "date": "2026-11-24",
-      "steps": 48,
-      "calories_total": 558,
-      "calories_active": 3,
+      "steps": 2833,
+      "calories_total": 2524,
+      "calories_active": 576,
       "resting_hr_bpm": 43,
-      "stress_avg": 9,
+      "stress_avg": 26,
       "body_battery_high": 100,
-      "body_battery_low": 63,
+      "body_battery_low": 28,
       "body_battery_charged": 37,
-      "body_battery_drained": 1,
+      "body_battery_drained": 72,
       "intensity_moderate_min": 0,
       "intensity_vigorous_min": 0,
       "sleep_score": 86,
@@ -228,10 +228,35 @@
       "hrv_weekly_avg_ms": null,
       "hrv_status": "NONE",
       "hrv_baseline_low_ms": null,
-      "hrv_baseline_high_ms": null
+      "hrv_baseline_high_ms": null,
+      "vo2_max": 66.0
     }
   ],
   "activities": [
+    {
+      "id": 25186388289,
+      "name": "Zwift - Minimum VO2max",
+      "type": "virtual_ride",
+      "start_local": "2026-11-24 17:48:38",
+      "duration_s": 2721.0,
+      "distance_m": 25866.220703125,
+      "distance_km": 25.866,
+      "avg_hr_bpm": 158.0,
+      "max_hr_bpm": 196.0,
+      "avg_pace_min_per_km": 1.75,
+      "training_load": 209.295166015625,
+      "aerobic_te": 3.799999952316284,
+      "anaerobic_te": 2.700000047683716,
+      "hr_zone_min": {
+        "z1": 4.2,
+        "z2": 8.4,
+        "z3": 12.6,
+        "z4": 9.9,
+        "z5": 10.1
+      },
+      "calories": 587.0,
+      "elevation_gain_m": 241.0
+    },
     {
       "id": 25164501011,
       "name": "Zwift - Z2 wave 90min",
@@ -498,19 +523,19 @@
     }
   ],
   "aggregates": {
-    "activity_count": 11,
-    "total_duration_s": 43061.8,
-    "total_distance_km": 331.801,
-    "total_training_load": 1015.1,
+    "activity_count": 12,
+    "total_duration_s": 45782.8,
+    "total_distance_km": 357.667,
+    "total_training_load": 1224.4,
     "activities_by_type": {
-      "virtual_ride": 6,
+      "virtual_ride": 7,
       "gravel_cycling": 1,
       "strength_training": 4
     },
     "avg_sleep_score": 85.0,
     "avg_hrv_last_night_ms": 55.0,
     "avg_resting_hr_bpm": 74.57,
-    "avg_stress": 14.8,
+    "avg_stress": 18.2,
     "fitness_age": {
       "chronologicalAge": 31,
       "fitnessAge": 28.933392250646783,
@@ -559,14 +584,14 @@
       "hrv_last_night_ms": 59,
       "hrv_vs_baseline": "unknown",
       "body_battery_high": 100,
-      "stress_avg": 9,
+      "stress_avg": 26,
       "qualitative": "strong"
     }
   },
   "notes": [
     "Training Readiness / Training Status are not in Personal API; aggregates.recovery.qualitative is a local heuristic."
   ],
-  "generated_at": "2026-11-24T13:15:16.852031+00:00",
+  "generated_at": "2026-11-24T23:03:42.195117+00:00",
   "athlete": {
     "name": "3438c958-8aa9-4725-8600-e917bf16a894"
   },
@@ -575,19 +600,19 @@
       "start": "2026-11-11",
       "end": "2026-11-24"
     },
-    "workouts": 11,
-    "hours": 11.96,
-    "distance_km": 331.801,
-    "training_load": 1015.1,
+    "workouts": 12,
+    "hours": 12.72,
+    "distance_km": 357.667,
+    "training_load": 1224.4,
     "activities_by_type": {
-      "virtual_ride": 6,
+      "virtual_ride": 7,
       "gravel_cycling": 1,
       "strength_training": 4
     },
     "avg_sleep_score": 85.0,
     "avg_hrv_last_night_ms": 55.0,
     "avg_resting_hr_bpm": 74.57,
-    "avg_stress": 14.8,
+    "avg_stress": 18.2,
     "recovery_qualitative": "strong",
     "recovery": {
       "latest_date": "2026-11-24",
@@ -595,11 +620,22 @@
       "hrv_last_night_ms": 59,
       "hrv_vs_baseline": "unknown",
       "body_battery_high": 100,
-      "stress_avg": 9,
+      "stress_avg": 26,
       "qualitative": "strong"
     }
   },
   "recent_activities": [
+    {
+      "date": "2026-11-24",
+      "name": "Zwift - Minimum VO2max",
+      "type": "virtual_ride",
+      "duration_min": 45.4,
+      "distance_km": 25.866,
+      "training_load": 209.295166015625,
+      "avg_hr_bpm": 158.0,
+      "aerobic_te": 3.799999952316284,
+      "anaerobic_te": 2.700000047683716
+    },
     {
       "date": "2026-11-22",
       "name": "Zwift - Z2 wave 90min",
