@@ -1,6 +1,6 @@
 # Training Summary — 3438c958-8aa9-4725-8600-e917bf16a894
 
-Generated: 2026-11-25T05:24:18.837696+00:00
+Generated: 2026-11-25T15:53:46.355555+00:00
 Range: 2026-11-12 → 2026-11-25
 
 ## Summary
@@ -15,7 +15,7 @@ Range: 2026-11-12 → 2026-11-25
 - Sleep score: 80
 - HRV (last night): 63 ms
 - Body Battery high: 91
-- Stress avg: 14
+- Stress avg: 31
 
 ## Recent Activities
 - 2026-11-24: virtual_ride — Zwift - Minimum VO2max, 45.4 min, 25.866 km, load 209.295166015625
