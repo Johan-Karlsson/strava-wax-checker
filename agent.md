@@ -1,21 +1,21 @@
 # Training Summary — 3438c958-8aa9-4725-8600-e917bf16a894
 
-Generated: 2026-11-24T23:03:42.195117+00:00
-Range: 2026-11-11 → 2026-11-24
+Generated: 2026-11-25T05:24:18.837696+00:00
+Range: 2026-11-12 → 2026-11-25
 
 ## Summary
-- Workouts: 12
-- Time: 12.72 h
+- Workouts: 11
+- Time: 11.87 h
 - Distance: 357.667 km
 - Training load: 1224.4
-- Activities by type: {'virtual_ride': 7, 'gravel_cycling': 1, 'strength_training': 4}
+- Activities by type: {'virtual_ride': 7, 'gravel_cycling': 1, 'strength_training': 3}
 
 ## Recovery
 - Qualitative: strong
-- Sleep score: 86
-- HRV (last night): 59 ms
-- Body Battery high: 100
-- Stress avg: 26
+- Sleep score: 80
+- HRV (last night): 63 ms
+- Body Battery high: 91
+- Stress avg: 14
 
 ## Recent Activities
 - 2026-11-24: virtual_ride — Zwift - Minimum VO2max, 45.4 min, 25.866 km, load 209.295166015625
@@ -29,7 +29,6 @@ Range: 2026-11-11 → 2026-11-24
 - 2026-11-15: strength_training — Styrka, 39.8 min, None km, load None
 - 2026-11-15: virtual_ride — Zwift - Minimum VO2max, 45.2 min, 29.428 km, load 280.2152404785156
 - 2026-11-12: virtual_ride — Zwift - Z2 wave 90min, 90.4 min, 52.586 km, load 80.52812194824219
-- 2026-11-11: strength_training — Styrka, 51.0 min, None km, load None
 
 ## Notes
 - Training Readiness / Training Status are not in Personal API; aggregates.recovery.qualitative is a local heuristic.
