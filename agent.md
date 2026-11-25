@@ -1,14 +1,14 @@
 # Training Summary — 3438c958-8aa9-4725-8600-e917bf16a894
 
-Generated: 2026-11-25T15:53:46.355555+00:00
+Generated: 2026-11-25T23:57:16.797336+00:00
 Range: 2026-11-12 → 2026-11-25
 
 ## Summary
-- Workouts: 11
-- Time: 11.87 h
-- Distance: 357.667 km
-- Training load: 1224.4
-- Activities by type: {'virtual_ride': 7, 'gravel_cycling': 1, 'strength_training': 3}
+- Workouts: 12
+- Time: 13.37 h
+- Distance: 412.967 km
+- Training load: 1431.5
+- Activities by type: {'virtual_ride': 8, 'gravel_cycling': 1, 'strength_training': 3}
 
 ## Recovery
 - Qualitative: strong
@@ -18,6 +18,7 @@ Range: 2026-11-12 → 2026-11-25
 - Stress avg: 31
 
 ## Recent Activities
+- 2026-11-25: virtual_ride — Zwift -  3x20min, 90.5 min, 55.3 km, load 207.10183715820312
 - 2026-11-24: virtual_ride — Zwift - Minimum VO2max, 45.4 min, 25.866 km, load 209.295166015625
 - 2026-11-22: virtual_ride — Zwift - Z2 wave 90min, 91.0 min, 56.333 km, load 72.90969848632812
 - 2026-11-22: gravel_cycling — Gothenburg Gravel/Unpaved Cycling, 16.3 min, 6.877 km, load 27.187423706054688

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "garmin-connect-personal-api",
-  "fetched_at": "2026-11-25T15:53:46.355555+00:00",
+  "fetched_at": "2026-11-25T23:57:16.797336+00:00",
   "range": {
     "start": "2026-11-12",
     "end": "2026-11-25"
@@ -220,8 +220,8 @@
     {
       "date": "2026-11-25",
       "steps": 4346,
-      "calories_total": 1475,
-      "calories_active": 199,
+      "calories_total": 2567,
+      "calories_active": 1291,
       "resting_hr_bpm": 47,
       "stress_avg": 31,
       "body_battery_high": 91,
@@ -241,10 +241,35 @@
       "hrv_weekly_avg_ms": 57,
       "hrv_status": "NONE",
       "hrv_baseline_low_ms": null,
-      "hrv_baseline_high_ms": null
+      "hrv_baseline_high_ms": null,
+      "vo2_max": 66.0
     }
   ],
   "activities": [
+    {
+      "id": 25197788727,
+      "name": "Zwift -  3x20min",
+      "type": "virtual_ride",
+      "start_local": "2026-11-25 17:36:16",
+      "duration_s": 5428.0,
+      "distance_m": 55300.19140625,
+      "distance_km": 55.3,
+      "avg_hr_bpm": 161.0,
+      "max_hr_bpm": 180.0,
+      "avg_pace_min_per_km": 1.64,
+      "training_load": 207.10183715820312,
+      "aerobic_te": 4.400000095367432,
+      "anaerobic_te": 0.0,
+      "hr_zone_min": {
+        "z1": 3.5,
+        "z2": 10.2,
+        "z3": 18.3,
+        "z4": 58.4,
+        "z5": 0.0
+      },
+      "calories": 1223.0,
+      "elevation_gain_m": 574.0
+    },
     {
       "id": 25186388289,
       "name": "Zwift - Minimum VO2max",
@@ -511,12 +536,12 @@
     }
   ],
   "aggregates": {
-    "activity_count": 11,
-    "total_duration_s": 42721.5,
-    "total_distance_km": 357.667,
-    "total_training_load": 1224.4,
+    "activity_count": 12,
+    "total_duration_s": 48149.5,
+    "total_distance_km": 412.967,
+    "total_training_load": 1431.5,
     "activities_by_type": {
-      "virtual_ride": 7,
+      "virtual_ride": 8,
       "gravel_cycling": 1,
       "strength_training": 3
     },
@@ -579,7 +604,7 @@
   "notes": [
     "Training Readiness / Training Status are not in Personal API; aggregates.recovery.qualitative is a local heuristic."
   ],
-  "generated_at": "2026-11-25T15:53:46.355555+00:00",
+  "generated_at": "2026-11-25T23:57:16.797336+00:00",
   "athlete": {
     "name": "3438c958-8aa9-4725-8600-e917bf16a894"
   },
@@ -588,12 +613,12 @@
       "start": "2026-11-12",
       "end": "2026-11-25"
     },
-    "workouts": 11,
-    "hours": 11.87,
-    "distance_km": 357.667,
-    "training_load": 1224.4,
+    "workouts": 12,
+    "hours": 13.37,
+    "distance_km": 412.967,
+    "training_load": 1431.5,
     "activities_by_type": {
-      "virtual_ride": 7,
+      "virtual_ride": 8,
       "gravel_cycling": 1,
       "strength_training": 3
     },
@@ -613,6 +638,17 @@
     }
   },
   "recent_activities": [
+    {
+      "date": "2026-11-25",
+      "name": "Zwift -  3x20min",
+      "type": "virtual_ride",
+      "duration_min": 90.5,
+      "distance_km": 55.3,
+      "training_load": 207.10183715820312,
+      "avg_hr_bpm": 161.0,
+      "aerobic_te": 4.400000095367432,
+      "anaerobic_te": 0.0
+    },
     {
       "date": "2026-11-24",
       "name": "Zwift - Minimum VO2max",
