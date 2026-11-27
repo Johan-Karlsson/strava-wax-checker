@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "garmin-connect-personal-api",
-  "fetched_at": "2026-11-27T09:39:39.737841+00:00",
+  "fetched_at": "2026-11-27T19:11:08.006814+00:00",
   "range": {
     "start": "2026-11-14",
     "end": "2026-11-27"
@@ -253,15 +253,15 @@
     },
     {
       "date": "2026-11-27",
-      "steps": 456,
-      "calories_total": 888,
-      "calories_active": 2,
+      "steps": 2704,
+      "calories_total": 1410,
+      "calories_active": 57,
       "resting_hr_bpm": 49,
-      "stress_avg": 20,
+      "stress_avg": 23,
       "body_battery_high": 92,
       "body_battery_low": 36,
       "body_battery_charged": 56,
-      "body_battery_drained": 23,
+      "body_battery_drained": 43,
       "intensity_moderate_min": 0,
       "intensity_vigorous_min": 0,
       "sleep_score": 83,
@@ -581,7 +581,7 @@
     "avg_sleep_score": 83.17,
     "avg_hrv_last_night_ms": 55.83,
     "avg_resting_hr_bpm": 64.22,
-    "avg_stress": 21.71,
+    "avg_stress": 22.14,
     "fitness_age": {
       "chronologicalAge": 31,
       "fitnessAge": 28.342374618425357,
@@ -630,14 +630,14 @@
       "hrv_last_night_ms": 55,
       "hrv_vs_baseline": "unknown",
       "body_battery_high": 92,
-      "stress_avg": 20,
+      "stress_avg": 23,
       "qualitative": "strong"
     }
   },
   "notes": [
     "Training Readiness / Training Status are not in Personal API; aggregates.recovery.qualitative is a local heuristic."
   ],
-  "generated_at": "2026-11-27T09:39:39.737841+00:00",
+  "generated_at": "2026-11-27T19:11:08.006814+00:00",
   "athlete": {
     "name": "3438c958-8aa9-4725-8600-e917bf16a894"
   },
@@ -658,7 +658,7 @@
     "avg_sleep_score": 83.17,
     "avg_hrv_last_night_ms": 55.83,
     "avg_resting_hr_bpm": 64.22,
-    "avg_stress": 21.71,
+    "avg_stress": 22.14,
     "recovery_qualitative": "strong",
     "recovery": {
       "latest_date": "2026-11-27",
@@ -666,7 +666,7 @@
       "hrv_last_night_ms": 55,
       "hrv_vs_baseline": "unknown",
       "body_battery_high": 92,
-      "stress_avg": 20,
+      "stress_avg": 23,
       "qualitative": "strong"
     }
   },

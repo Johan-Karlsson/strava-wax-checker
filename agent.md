@@ -1,6 +1,6 @@
 # Training Summary — 3438c958-8aa9-4725-8600-e917bf16a894
 
-Generated: 2026-11-27T09:39:39.737841+00:00
+Generated: 2026-11-27T19:11:08.006814+00:00
 Range: 2026-11-14 → 2026-11-27
 
 ## Summary
@@ -15,7 +15,7 @@ Range: 2026-11-14 → 2026-11-27
 - Sleep score: 83
 - HRV (last night): 55 ms
 - Body Battery high: 92
-- Stress avg: 20
+- Stress avg: 23
 
 ## Recent Activities
 - 2026-11-26: strength_training — Strength, 75.4 min, None km, load 19.060714721679688
