@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "garmin-connect-personal-api",
-  "fetched_at": "2026-11-28T02:01:43.415567+00:00",
+  "fetched_at": "2026-11-28T10:15:25.806151+00:00",
   "range": {
     "start": "2026-11-15",
     "end": "2026-11-28"
@@ -248,15 +248,15 @@
     },
     {
       "date": "2026-11-27",
-      "steps": 2704,
-      "calories_total": 1410,
-      "calories_active": 57,
+      "steps": 3460,
+      "calories_total": 2151,
+      "calories_active": 62,
       "resting_hr_bpm": 49,
-      "stress_avg": 23,
+      "stress_avg": 27,
       "body_battery_high": 92,
-      "body_battery_low": 36,
+      "body_battery_low": 24,
       "body_battery_charged": 56,
-      "body_battery_drained": 43,
+      "body_battery_drained": 68,
       "intensity_moderate_min": 0,
       "intensity_vigorous_min": 0,
       "sleep_score": 83,
@@ -274,8 +274,29 @@
     },
     {
       "date": "2026-11-28",
-      "body_battery_charged": null,
-      "body_battery_drained": null
+      "steps": 20,
+      "calories_total": 725,
+      "calories_active": 0,
+      "resting_hr_bpm": 49,
+      "stress_avg": 23,
+      "body_battery_high": 74,
+      "body_battery_low": 24,
+      "body_battery_charged": 50,
+      "body_battery_drained": 0,
+      "intensity_moderate_min": 0,
+      "intensity_vigorous_min": 0,
+      "sleep_score": 77,
+      "sleep_qualifier": "FAIR",
+      "sleep_duration_s": 29280,
+      "sleep_deep_s": 4320,
+      "sleep_light_s": 20580,
+      "sleep_rem_s": 4380,
+      "sleep_awake_s": 1560,
+      "hrv_last_night_ms": 48,
+      "hrv_weekly_avg_ms": 55,
+      "hrv_status": "NONE",
+      "hrv_baseline_low_ms": null,
+      "hrv_baseline_high_ms": null
     }
   ],
   "activities": [
@@ -578,10 +599,10 @@
       "virtual_ride": 7,
       "gravel_cycling": 1
     },
-    "avg_sleep_score": 83.17,
-    "avg_hrv_last_night_ms": 55.83,
-    "avg_resting_hr_bpm": 64.22,
-    "avg_stress": 22.14,
+    "avg_sleep_score": 82.29,
+    "avg_hrv_last_night_ms": 54.71,
+    "avg_resting_hr_bpm": 62.7,
+    "avg_stress": 22.75,
     "fitness_age": {
       "chronologicalAge": 31,
       "fitnessAge": 28.342374618425357,
@@ -625,19 +646,19 @@
       "lastUpdated": "2026-11-27T00:00:00.0"
     },
     "recovery": {
-      "latest_date": "2026-11-27",
-      "sleep_score": 83,
-      "hrv_last_night_ms": 55,
+      "latest_date": "2026-11-28",
+      "sleep_score": 77,
+      "hrv_last_night_ms": 48,
       "hrv_vs_baseline": "unknown",
-      "body_battery_high": 92,
+      "body_battery_high": 74,
       "stress_avg": 23,
-      "qualitative": "strong"
+      "qualitative": "adequate"
     }
   },
   "notes": [
     "Training Readiness / Training Status are not in Personal API; aggregates.recovery.qualitative is a local heuristic."
   ],
-  "generated_at": "2026-11-28T02:01:43.415567+00:00",
+  "generated_at": "2026-11-28T10:15:25.806151+00:00",
   "athlete": {
     "name": "3438c958-8aa9-4725-8600-e917bf16a894"
   },
@@ -655,19 +676,19 @@
       "virtual_ride": 7,
       "gravel_cycling": 1
     },
-    "avg_sleep_score": 83.17,
-    "avg_hrv_last_night_ms": 55.83,
-    "avg_resting_hr_bpm": 64.22,
-    "avg_stress": 22.14,
-    "recovery_qualitative": "strong",
+    "avg_sleep_score": 82.29,
+    "avg_hrv_last_night_ms": 54.71,
+    "avg_resting_hr_bpm": 62.7,
+    "avg_stress": 22.75,
+    "recovery_qualitative": "adequate",
     "recovery": {
-      "latest_date": "2026-11-27",
-      "sleep_score": 83,
-      "hrv_last_night_ms": 55,
+      "latest_date": "2026-11-28",
+      "sleep_score": 77,
+      "hrv_last_night_ms": 48,
       "hrv_vs_baseline": "unknown",
-      "body_battery_high": 92,
+      "body_battery_high": 74,
       "stress_avg": 23,
-      "qualitative": "strong"
+      "qualitative": "adequate"
     }
   },
   "recent_activities": [
