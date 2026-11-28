@@ -1,10 +1,10 @@
 {
   "schema_version": "1.0",
   "source": "garmin-connect-personal-api",
-  "fetched_at": "2026-11-27T19:11:08.006814+00:00",
+  "fetched_at": "2026-11-28T02:01:43.415567+00:00",
   "range": {
-    "start": "2026-11-14",
-    "end": "2026-11-27"
+    "start": "2026-11-15",
+    "end": "2026-11-28"
   },
   "availability": {
     "profile": {
@@ -39,11 +39,6 @@
     "display_name": "3438c958-8aa9-4725-8600-e917bf16a894"
   },
   "daily": [
-    {
-      "date": "2026-11-14",
-      "body_battery_charged": null,
-      "body_battery_drained": null
-    },
     {
       "date": "2026-11-15",
       "steps": 1855,
@@ -276,6 +271,11 @@
       "hrv_status": "NONE",
       "hrv_baseline_low_ms": null,
       "hrv_baseline_high_ms": null
+    },
+    {
+      "date": "2026-11-28",
+      "body_battery_charged": null,
+      "body_battery_drained": null
     }
   ],
   "activities": [
@@ -637,14 +637,14 @@
   "notes": [
     "Training Readiness / Training Status are not in Personal API; aggregates.recovery.qualitative is a local heuristic."
   ],
-  "generated_at": "2026-11-27T19:11:08.006814+00:00",
+  "generated_at": "2026-11-28T02:01:43.415567+00:00",
   "athlete": {
     "name": "3438c958-8aa9-4725-8600-e917bf16a894"
   },
   "summary": {
     "range": {
-      "start": "2026-11-14",
-      "end": "2026-11-27"
+      "start": "2026-11-15",
+      "end": "2026-11-28"
     },
     "workouts": 12,
     "hours": 13.13,
